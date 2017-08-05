@@ -1,0 +1,117 @@
+/*body{*/
+    /*background-color: #6ecded;*/
+/*}*/
+
+a{text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.side{
+    width: 1125px;
+    float: left;
+}
+.menu a{
+    background: #3d3d3d;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #666;
+    transition: 0.5s all;
+}
+.menu a:hover{
+    background: #666;
+    padding: 10px 0 10px 20px;
+}
+.menu__list{
+    text-align: center;
+    width: 225px;
+    position: relative;
+    float: left;
+}
+
+.menu__drop{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    margin-top: 39px;
+    top: -9999em;
+    transition: 0.5s opacity;
+}
+.menu__list:hover .menu__drop{
+    opacity: 1;
+    top: 0;
+}
+.logout-button{
+    width: 200px;
+    height: 39px;
+    border: none;
+    color: white;
+    background-color: #3d3d3d;
+    transition: 0.5s all;
+}
+.logout-button:hover{
+    background-color: #666;
+}
+
+.categories{
+    width: 1200px;
+    height: 250px;
+    margin-top: 300px;
+    margin-left: 70px;
+    opacity: 0.8;
+    /*background-color: black;*/
+}
+.category1{
+    width: 298px;
+    height: 123px;
+    background-color:#6ecded;
+    float: left;
+    border: none;
+}
+.category2{
+    width: 298px;
+    height: 123px;
+    margin-left: 2px;
+    background-color: #6ecded;
+    float: left;
+    border: none;
+}
+
+.category3{
+    width: 298px;
+    height: 123px;
+    margin-top: 2px;
+    background-color: #6ecded;
+    float: left;
+    border: none;
+}
+.category4{
+    width: 298px;
+    height: 123px;
+    margin-left: 2px;
+    margin-top: 2px;
+    background-color:#6ecded;
+    float: left;
+    border: none;
+}
+.account-form{
+    width: 300px;
+    display: none;
+}
+/*.account{*/
+    /*width: 300px;*/
+    /*height: 125px;*/
+    /*border: solid 0.5px black;*/
+    /*border-radius: 10px;*/
+    /*margin-left: 150px;*/
+    /*margin-top: 100px;*/
+    /*transition: 0.5s all;*/
+/*}*/
+/*.account:hover{*/
+    /*background-color: gold;*/
+/*}*/
+
+
