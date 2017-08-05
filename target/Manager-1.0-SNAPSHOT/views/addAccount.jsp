@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Add Account</title>
 </head>
 <body>
 
@@ -19,6 +19,8 @@
         <button type="submit">Submit</button>
     </div>
 </form>
+
+<a href="/"><button type="submit">home</button></a>
 
 </body>
 </html>

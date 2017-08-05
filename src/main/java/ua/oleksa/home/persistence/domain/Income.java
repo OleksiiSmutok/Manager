@@ -14,16 +14,16 @@ public class Income {
     private String description;
     private double sum;
 
-    @ManyToOne
-    private User user;
+    @ManyToMany
+    private Account account;
 
-    public Income(String description, double sum, User user) {
+    public Income(String description, double sum, Account account) {
         this.description = description;
         this.sum = sum;
-        this.user = user;
+        this.account = account;
     }
 
-    public Income() {
+    public Income(String description, double sum) {
     }
 
     public int getId() {
@@ -50,12 +50,12 @@ public class Income {
         this.sum = sum;
     }
 
-    public User getUser() {
-        return user;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
     @Override
@@ -64,7 +64,6 @@ public class Income {
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", sum=" + sum +
-                ", user=" + user +
                 '}';
     }
 }

@@ -24,18 +24,11 @@ public class User {
 //    private String resetKey;
 //    private boolean active;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE)
     private List<Account>accounts;
 
     @OneToMany(mappedBy = "user")
     private List<Category>categories;
-
-    @OneToMany(mappedBy = "user")
-    private List<Income>incomes;
-
-    @OneToMany(mappedBy = "user")
-    private List<Spending>spendings;
-
 
     public User(String firstName, String secondName, String email, String phone, String login, String password) {
         this.firstName = firstName;
@@ -113,22 +106,6 @@ public class User {
         this.photo = photo;
     }
 
-    public List<Income> getIncomes() {
-        return incomes;
-    }
-
-    public void setIncomes(List<Income> incomes) {
-        this.incomes = incomes;
-    }
-
-    public List<Spending> getSpendings() {
-        return spendings;
-    }
-
-    public void setSpendings(List<Spending> spendings) {
-        this.spendings = spendings;
-    }
-
     public List<Category> getCategories() {
         return categories;
     }
@@ -185,8 +162,8 @@ public class User {
 //                ", active=" + active +
                 ", accounts=" + accounts +
                 ", categories=" + categories +
-                ", incomes=" + incomes +
-                ", spendings=" + spendings +
+//                ", incomes=" + incomes +
+//                ", spendings=" + spendings +
                 '}';
     }
 }

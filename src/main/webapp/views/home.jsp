@@ -34,7 +34,7 @@
         <li class="menu__list"><a href="#">Account</a>
             <ul class="menu__drop">
                 <li><a href="/account/page">Add Account</a></li>
-                <li><a href="#">Подпункт 2</a></li>
+                <li><a href="/view/account">View Accounts</a></li>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>
                 <%--<li><a href="#">Подпункт 5</a></li>--%>
@@ -43,7 +43,7 @@
 
         <li class="menu__list"><a href="#">Income</a>
             <ul class="menu__drop">
-                <li><a href="#">Подпункт 1</a></li>
+                <li><a href="/add/income">Add Income</a></li>
                 <li><a href="#">Подпункт 2</a></li>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>

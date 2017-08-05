@@ -3,8 +3,11 @@ package ua.oleksa.home.persistence.service.implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.oleksa.home.persistence.domain.Account;
+import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.repository.AccountRepo;
 import ua.oleksa.home.persistence.service.AccountService;
+
+import java.util.List;
 
 /**
  * Created by Admin on 04.08.2017.
@@ -17,15 +20,13 @@ public class AccountServiceImpl implements AccountService {
 
 
     @Override
-    public void add(String name, double balance) {
-        Account account = new Account();
-        account.setName(name);
-        account.setBalance(balance);
+    public void add(String name, double balance,User user) {
+        Account account = new Account(name,balance,user);
         accountRepo.save(account);
     }
 
     @Override
-    public void edit(int id, String name, double balance) {
+    public void update(int id, String name, double balance) {
         Account account = accountRepo.findOne(id);
         account.setName(name);
         account.setBalance(balance);
@@ -40,5 +41,15 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Account findOne(int id) {
         return accountRepo.findOne(id);
+    }
+
+    @Override
+    public List<Account> findAll() {
+        return accountRepo.findAll();
+    }
+
+    @Override
+    public List<Account> findAccountByUser(User user) {
+        return accountRepo.findAccountByUser(user);
     }
 }
