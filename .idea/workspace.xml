@@ -6,41 +6,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/webapp/resources/css/home.css" line="14" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca0ac184-dc3d-4b8d-a8c9-ed6c74906b4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/controller/HomeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/controller/IncomeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/controller/RegistrationController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/service/IncomeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/service/implementation/IncomeServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/views/addIncome.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/views/viewAccount.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/controller/BaseController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/views/account.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/oleksa/home/controller/BaseController.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/controller/BaseController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/controller/LoginController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/views/account.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/addAccount.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/controller/AccountController.class" afterPath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/controller/AccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/persistence/domain/User.class" afterPath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/persistence/domain/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/persistence/repository/AccountRepo.class" afterPath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/persistence/repository/AccountRepo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/persistence/service/AccountService.class" afterPath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/persistence/service/AccountService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/persistence/service/implementation/AccountServiceImpl.class" afterPath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/WEB-INF/classes/ua/oleksa/home/persistence/service/implementation/AccountServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/oleksa/home/controller/AccountController.class" afterPath="$PROJECT_DIR$/target/classes/ua/oleksa/home/controller/AccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/oleksa/home/persistence/domain/User.class" afterPath="$PROJECT_DIR$/target/classes/ua/oleksa/home/persistence/domain/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/oleksa/home/persistence/repository/AccountRepo.class" afterPath="$PROJECT_DIR$/target/classes/ua/oleksa/home/persistence/repository/AccountRepo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/oleksa/home/persistence/service/AccountService.class" afterPath="$PROJECT_DIR$/target/classes/ua/oleksa/home/persistence/service/AccountService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/oleksa/home/persistence/service/implementation/AccountServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/ua/oleksa/home/persistence/service/implementation/AccountServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/controller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/controller/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/domain/Account.java" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/domain/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/domain/Income.java" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/domain/Income.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/domain/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/repository/AccountRepo.java" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/repository/AccountRepo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/service/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/service/AccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/service/implementation/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/oleksa/home/persistence/service/implementation/AccountServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/views/home.jsp" afterPath="$PROJECT_DIR$/target/Manager-1.0-SNAPSHOT/views/home.jsp" />
-    </list>
+    <list default="true" id="ca0ac184-dc3d-4b8d-a8c9-ed6c74906b4f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -474,108 +440,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1155,16 +1019,15 @@
       <workItem from="1501583213635" duration="29490000" />
       <workItem from="1501780853932" duration="13966000" />
       <workItem from="1501864610760" duration="2796000" />
-      <workItem from="1501930321838" duration="16396000" />
+      <workItem from="1501930321838" duration="16636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104688000" />
+    <option name="totallyTimeSpent" value="104928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1189,7 +1052,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3633388" sideWeight="0.4939302" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25948405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25948405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
