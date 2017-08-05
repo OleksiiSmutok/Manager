@@ -15,9 +15,8 @@ import java.util.List;
 @Service
 public class AccountServiceImpl implements AccountService {
 
-    @Autowired
+   @Autowired
     AccountRepo accountRepo;
-
 
     @Override
     public void add(String name, double balance,User user) {

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import ua.oleksa.home.persistence.domain.Account;
 import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.service.AccountService;
@@ -29,12 +30,19 @@ public class IncomeController {
     @Autowired
     IncomeService incomeService;
 
-    @RequestMapping(value = "/add/income",method = RequestMethod.GET)
-    public String addIncome(Model model, Principal principal){
+    @RequestMapping(value = "/income/page",method = RequestMethod.GET)
+    public String incomePage(Model model, Principal principal){
         User user = userService.findByLogin(principal.getName());
         List<Account> accountList = accountService.findAccountByUser(user);
         model.addAttribute("accountList",accountList);
         model.addAttribute("user",user);
+        return "addIncome";
+    }
+    @RequestMapping(value = "/add/income",method = RequestMethod.POST)
+    public String addIncome(Principal principal,
+                            @RequestParam("description")String description,
+                            @RequestParam("sum")double sum){
+        incomeService.add(description,sum);
         return "addIncome";
     }
 

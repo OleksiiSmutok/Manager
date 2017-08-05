@@ -19,5 +19,10 @@
     </c:forEach>
 </select>
 
+<div>
+    <input type="text" name="">
+    <button type="submit">Confirm</button>
+</div>
+
 </body>
 </html>

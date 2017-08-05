@@ -7,7 +7,7 @@ package ua.oleksa.home.persistence.service;
  */
 public interface IncomeService {
 
-    void addIncome(String description,double sum);
+    void add(String description,double sum);
 
     void update(int id,String description,double sum);
 }

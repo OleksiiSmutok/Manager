@@ -23,7 +23,6 @@ public class LoginController {
     @Autowired
     UserService userService;
 
-
     @RequestMapping(value = "/loginPage", method = RequestMethod.GET)
     public String login(){
         return "loginPage";

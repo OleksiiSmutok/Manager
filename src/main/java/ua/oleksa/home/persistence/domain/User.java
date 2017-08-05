@@ -20,12 +20,11 @@ public class User {
     private String login;
     private String password;
     private String photo;
-//    private String activationKey;
-//    private String resetKey;
-//    private boolean active;
+
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE)
     private List<Account>accounts;
+
 
     @OneToMany(mappedBy = "user")
     private List<Category>categories;
@@ -106,14 +105,6 @@ public class User {
         this.photo = photo;
     }
 
-    public List<Category> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
-    }
-
     public List<Account> getAccounts() {
         return accounts;
     }
@@ -122,29 +113,6 @@ public class User {
         this.accounts = accounts;
     }
 
-//    public String getActivationKey() {
-//        return activationKey;
-//    }
-//
-//    public void setActivationKey(String activationKey) {
-//        this.activationKey = activationKey;
-//    }
-//
-//    public String getResetKey() {
-//        return resetKey;
-//    }
-//
-//    public void setResetKey(String resetKey) {
-//        this.resetKey = resetKey;
-//    }
-//
-//    public boolean isActive() {
-//        return active;
-//    }
-//
-//    public void setActive(boolean active) {
-//        this.active = active;
-//    }
 
     @Override
     public String toString() {
@@ -157,13 +125,8 @@ public class User {
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", photo='" + photo + '\'' +
-//                ", activationKey='" + activationKey + '\'' +
-//                ", resetKey='" + resetKey + '\'' +
-//                ", active=" + active +
                 ", accounts=" + accounts +
                 ", categories=" + categories +
-//                ", incomes=" + incomes +
-//                ", spendings=" + spendings +
                 '}';
     }
 }

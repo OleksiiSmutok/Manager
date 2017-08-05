@@ -43,8 +43,8 @@
 
         <li class="menu__list"><a href="#">Income</a>
             <ul class="menu__drop">
-                <li><a href="/add/income">Add Income</a></li>
-                <li><a href="#">Подпункт 2</a></li>
+                <li><a href="/income/page">Add Income</a></li>
+                <li><a href="#">View Income</a></li>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>
                 <%--<li><a href="#">Подпункт 5</a></li>--%>

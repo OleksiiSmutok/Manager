@@ -15,9 +15,6 @@ public class Account {
     private String name;
     private double balance;
 
-    @OneToMany(mappedBy = "account",cascade = CascadeType.REMOVE)
-    List<Income>incomes;
-
     @ManyToOne
     private User user;
 
@@ -62,21 +59,12 @@ public class Account {
         this.user = user;
     }
 
-    public List<Income> getIncomes() {
-        return incomes;
-    }
-
-    public void setIncomes(List<Income> incomes) {
-        this.incomes = incomes;
-    }
-
     @Override
     public String toString() {
         return "Account{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", balance=" + balance +
-                ", incomes=" + incomes +
                 ", user=" + user +
                 '}';
     }
