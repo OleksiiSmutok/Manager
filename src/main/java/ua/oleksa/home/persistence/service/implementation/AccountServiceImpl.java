@@ -33,6 +33,11 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    public void update(Account account) {
+        accountRepo.save(account);
+    }
+
+    @Override
     public void delete(int id) {
         accountRepo.delete(id);
     }

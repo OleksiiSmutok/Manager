@@ -25,7 +25,6 @@ public class User {
     @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE)
     private List<Account>accounts;
 
-
     @OneToMany(mappedBy = "user")
     private List<Category>categories;
 
@@ -113,6 +112,13 @@ public class User {
         this.accounts = accounts;
     }
 
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
+    }
 
     @Override
     public String toString() {

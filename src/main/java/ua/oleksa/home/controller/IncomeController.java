@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.oleksa.home.persistence.domain.Account;
+import ua.oleksa.home.persistence.domain.Income;
 import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.service.AccountService;
 import ua.oleksa.home.persistence.service.IncomeService;
@@ -39,11 +40,14 @@ public class IncomeController {
         return "addIncome";
     }
     @RequestMapping(value = "/add/income",method = RequestMethod.POST)
-    public String addIncome(Principal principal,
-                            @RequestParam("description")String description,
-                            @RequestParam("sum")double sum){
+    public String addIncome(@RequestParam("description")String description,
+                            @RequestParam("sum")double sum,
+                            @RequestParam("account")int id){
+        Account account = accountService.findOne(id);
+        account.setBalance(sum+account.getBalance());
+        accountService.update(account);
         incomeService.add(description,sum);
-        return "addIncome";
+        return "redirect:/income/page";
     }
 
 }

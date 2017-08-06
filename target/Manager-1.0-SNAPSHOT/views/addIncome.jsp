@@ -13,11 +13,19 @@
 </head>
 <body>
 
-<select name="name">
+<form action="/add/income" method="post">
+<select name="account">
     <c:forEach items="${accountList}" var="account">
     <option value="${account.id}">${account.name}</option>
     </c:forEach>
 </select>
+
+    <input type="text" name="sum" placeholder="sum">
+    <input type="text" name="description" placeholder="description">
+    <button type="submit">Confirm</button>
+</form>
+
+<a href="/"><button type="submit">Home</button></a>
 
 </body>
 </html>

@@ -23,7 +23,7 @@
 
         <li class="menu__list"><a href="#">Category</a>
             <ul class="menu__drop">
-                <li><a href="#">Подпункт 1</a></li>
+                <li><a href="/category/page">Add Category</a></li>
                 <li><a href="#">Подпункт 2</a></li>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>

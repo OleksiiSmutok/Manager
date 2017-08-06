@@ -18,6 +18,9 @@ public class Account {
     @ManyToOne
     private User user;
 
+    @OneToMany(mappedBy = "account")
+    private List<Income>incomes;
+
     public Account(String name, double balance, User user) {
         this.name = name;
         this.balance = balance;
@@ -57,6 +60,14 @@ public class Account {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public List<Income> getIncomes() {
+        return incomes;
+    }
+
+    public void setIncomes(List<Income> incomes) {
+        this.incomes = incomes;
     }
 
     @Override

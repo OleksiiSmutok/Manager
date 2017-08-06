@@ -23,6 +23,11 @@ public class Category {
         this.user = user;
     }
 
+    public Category(String name, User user) {
+        this.name = name;
+        this.user = user;
+    }
+
     public Category() {
     }
 

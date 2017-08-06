@@ -14,6 +14,9 @@ public class Income {
     private String description;
     private double sum;
 
+    @ManyToOne
+    private Account account;
+
     public Income(String description, double sum) {
         this.description = description;
         this.sum = sum;
@@ -44,6 +47,14 @@ public class Income {
 
     public void setSum(double sum) {
         this.sum = sum;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
     @Override

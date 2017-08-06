@@ -16,6 +16,8 @@ public interface AccountService {
 
     void update(int id,String name, double balance);
 
+    void update(Account account);
+
     void delete(int id);
 
     Account findOne(int id);

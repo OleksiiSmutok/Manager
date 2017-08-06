@@ -13,14 +13,14 @@
 <body>
 
 <form action="/add/account" method="post">
-    <div class="account-form">
+    <div class="add-account-form">
         <input name="accountName" placeholder="Account Name">
         <input name="balance" placeholder="Balance">
-        <button type="submit">Submit</button>
+        <button type="submit">Confirm</button>
     </div>
 </form>
 
-<a href="/"><button type="submit">home</button></a>
+<a href="/"><button type="submit">Home</button></a>
 
 </body>
 </html>

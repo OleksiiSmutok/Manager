@@ -35,11 +35,10 @@ public class AccountController {
     }
 
     @RequestMapping(value = "/add/account",method = RequestMethod.POST)
-    public String addAccount(Model model,Principal principal,
+    public String addAccount(Principal principal,
                              @RequestParam("accountName")String name,
                              @RequestParam("balance")double balance){
         User user = userService.findByLogin(principal.getName());
-        model.addAttribute("user",user);
         accountService.add(name,balance,user);
         return "addAccount";
     }
