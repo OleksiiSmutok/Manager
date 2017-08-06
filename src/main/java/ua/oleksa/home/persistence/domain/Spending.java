@@ -14,13 +14,9 @@ public class Spending {
     private String description;
     private double sum;
 
-    @ManyToOne
-    private User user;
-
-    public Spending(String description, double sum, User user) {
+    public Spending(String description, double sum) {
         this.description = description;
         this.sum = sum;
-        this.user = user;
     }
 
     public Spending() {
@@ -50,21 +46,12 @@ public class Spending {
         this.sum = sum;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     @Override
     public String toString() {
         return "Spending{" +
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", sum=" + sum +
-                ", user=" + user +
                 '}';
     }
 }
