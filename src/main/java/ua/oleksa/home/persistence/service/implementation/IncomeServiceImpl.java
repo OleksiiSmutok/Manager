@@ -2,9 +2,13 @@ package ua.oleksa.home.persistence.service.implementation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.oleksa.home.persistence.domain.Account;
 import ua.oleksa.home.persistence.domain.Income;
+import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.repository.IncomeRepo;
 import ua.oleksa.home.persistence.service.IncomeService;
+
+import java.util.List;
 
 /**
  * Created by Admin on 05.08.2017.
@@ -28,5 +32,10 @@ public class IncomeServiceImpl implements IncomeService {
         income.setDescription(description);
         income.setSum(sum);
         incomeRepo.save(income);
+    }
+
+    @Override
+    public List<Income> findIncomeByUser(User user) {
+        return incomeRepo.findIncomeByUser(user);
     }
 }

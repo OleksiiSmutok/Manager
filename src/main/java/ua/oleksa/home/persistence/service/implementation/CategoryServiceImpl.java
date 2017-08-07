@@ -7,6 +7,8 @@ import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.repository.CategoryRepo;
 import ua.oleksa.home.persistence.service.CategoryService;
 
+import java.util.List;
+
 /**
  * Created by Admin on 07.08.2017.
  */
@@ -20,5 +22,10 @@ public class CategoryServiceImpl implements CategoryService {
     public void add(String name,User user) {
         Category category = new Category(name,user);
         categoryRepo.save(category);
+    }
+
+    @Override
+    public List<Category> findCategoryByUser(User user) {
+        return categoryRepo.findCategoryByUser(user);
     }
 }

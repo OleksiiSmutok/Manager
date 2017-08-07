@@ -49,5 +49,13 @@ public class IncomeController {
         incomeService.add(description,sum);
         return "redirect:/income/page";
     }
+    @RequestMapping(value = "/view/income",method = RequestMethod.GET)
+    public String viewIncome(Model model,Principal principal){
+        User user = userService.findByLogin(principal.getName());
+        List<Income>incomeList = incomeService.findIncomeByUser(user);
+        model.addAttribute("user",user);
+        model.addAttribute("incomeList",incomeList);
+        return "viewIncome";
+    }
 
 }

@@ -6,11 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import ua.oleksa.home.persistence.domain.Category;
 import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.service.CategoryService;
 import ua.oleksa.home.persistence.service.UserService;
 
 import java.security.Principal;
+import java.util.List;
 
 /**
  * Created by Admin on 07.08.2017.
@@ -37,5 +39,13 @@ public class CategoryController {
         User user = userService.findByLogin(principal.getName());
         categoryService.add(name,user);
         return "redirect:/category/page";
+    }
+    @RequestMapping(value = "/view/category",method = RequestMethod.GET)
+    public String viewCategory(Model model,Principal principal){
+        User user = userService.findByLogin(principal.getName());
+        List<Category>categoryList = categoryService.findCategoryByUser(user);
+        model.addAttribute("categoryList",categoryList);
+        model.addAttribute("user",user);
+        return "viewCategory";
     }
 }
