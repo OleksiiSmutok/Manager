@@ -21,8 +21,8 @@ public class IncomeServiceImpl implements IncomeService {
 
 
     @Override
-    public void add(String description, double sum) {
-        Income income = new Income(description,sum);
+    public void add(String description, double sum,User user,Account account) {
+        Income income = new Income(description,sum,user,account);
         incomeRepo.save(income);
     }
 

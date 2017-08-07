@@ -40,13 +40,15 @@ public class IncomeController {
         return "addIncome";
     }
     @RequestMapping(value = "/add/income",method = RequestMethod.POST)
-    public String addIncome(@RequestParam("description")String description,
+    public String addIncome(Principal principal,
+                            @RequestParam("description")String description,
                             @RequestParam("sum")double sum,
                             @RequestParam("account")int id){
+        User user = userService.findByLogin(principal.getName());
         Account account = accountService.findOne(id);
         account.setBalance(sum+account.getBalance());
         accountService.update(account);
-        incomeService.add(description,sum);
+        incomeService.add(description,sum,user,account);
         return "redirect:/income/page";
     }
     @RequestMapping(value = "/view/income",method = RequestMethod.GET)

@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface IncomeService {
 
-    void add(String description,double sum);
+    void add(String description,double sum,User user,Account account);
 
     void update(int id,String description,double sum);
 

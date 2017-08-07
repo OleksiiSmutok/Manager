@@ -20,9 +20,11 @@ public class Income {
     @ManyToOne
     private Account account;
 
-    public Income(String description, double sum) {
+    public Income(String description, double sum, User user, Account account) {
         this.description = description;
         this.sum = sum;
+        this.user = user;
+        this.account = account;
     }
 
     public Income() {
