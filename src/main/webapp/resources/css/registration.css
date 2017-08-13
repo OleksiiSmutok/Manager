@@ -1,0 +1,70 @@
+body{
+    background-image: url("/resources/img/canstockphoto18593550.jpg");
+}
+.registration-form{
+    width: 500px;
+    height: 520px;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    background-color: #6ecded;
+    border: solid 1px #666;
+}
+.title{
+    font-size: 40px;
+    color: #3d3d3d;
+    transition: 0.5s all;
+}
+.title:hover{
+    color: #919191;
+    padding: 0px 0 0px 10px;
+}
+.input-group{
+    width: 440px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 15px;
+    text-align: center;
+    float: right;
+}
+.button-registration{
+    width: 100px;
+    height: 30px;
+    color: white;
+    display: block;
+    margin-left: 200px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    background-color: #3d3d3d;
+    transition: 0.5s all;
+}
+.button-registration:hover{
+    background-color: #919191;
+}
+.button-login{
+    /*margin-left: 230px;*/
+    margin-top: 10px;
+    display: block;
+    color: #3d3d3d;
+    transition: 0.5s all;
+}
+.button-login:hover{
+    color: #919191;
+}
+.fa{
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #3d3d3d;
+    transition: 0.5s all;
+}
+.input{
+    width: 490px;
+    height: 40px;
+    margin-top: 15px;
+}
+.input:hover .fa{
+    color: #919191;
+}

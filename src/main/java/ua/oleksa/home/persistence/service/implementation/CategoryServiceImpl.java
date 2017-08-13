@@ -3,6 +3,7 @@ package ua.oleksa.home.persistence.service.implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.oleksa.home.persistence.domain.Category;
+import ua.oleksa.home.persistence.domain.Icon;
 import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.repository.CategoryRepo;
 import ua.oleksa.home.persistence.service.CategoryService;
@@ -19,8 +20,13 @@ public class CategoryServiceImpl implements CategoryService {
     CategoryRepo categoryRepo;
 
     @Override
-    public void add(String name,User user) {
-        Category category = new Category(name,user);
+    public void add(String name,User user,Icon icon) {
+        Category category = new Category(name,user,icon);
+        categoryRepo.save(category);
+    }
+
+    @Override
+    public void update(Category category) {
         categoryRepo.save(category);
     }
 
@@ -28,4 +34,10 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> findCategoryByUser(User user) {
         return categoryRepo.findCategoryByUser(user);
     }
+
+    @Override
+    public Category findOne(int id) {
+        return categoryRepo.findOne(id);
+    }
+
 }

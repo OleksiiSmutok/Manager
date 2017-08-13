@@ -1,6 +1,7 @@
 package ua.oleksa.home.persistence.domain;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 /**
  * Created by Admin on 01.06.2017.
@@ -13,6 +14,7 @@ public class Income {
     private int id;
     private String description;
     private double sum;
+    private Date date;
 
     @ManyToOne
     private User user;
@@ -20,9 +22,10 @@ public class Income {
     @ManyToOne
     private Account account;
 
-    public Income(String description, double sum, User user, Account account) {
+    public Income(String description, double sum, Date date, User user, Account account) {
         this.description = description;
         this.sum = sum;
+        this.date = date;
         this.user = user;
         this.account = account;
     }
@@ -70,12 +73,23 @@ public class Income {
         this.user = user;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "Income{" +
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", sum=" + sum +
+                ", date=" + date +
+                ", user=" + user +
+                ", account=" + account +
                 '}';
     }
 }

@@ -14,7 +14,7 @@
 <body>
 
 <c:forEach items="${incomeList}" var="income">
-    <div class="accounts">${income.sum} ${income.description} ${income.account}</div>
+    <div class="accounts"> ${income.sum} ${income.description} ${income.account.name} ${income.date}</div>
 </c:forEach>
 
 <a href="/"><button type="submit">home</button></a>

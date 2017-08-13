@@ -8,6 +8,7 @@ import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.repository.IncomeRepo;
 import ua.oleksa.home.persistence.service.IncomeService;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -21,8 +22,8 @@ public class IncomeServiceImpl implements IncomeService {
 
 
     @Override
-    public void add(String description, double sum,User user,Account account) {
-        Income income = new Income(description,sum,user,account);
+    public void add(String description, double sum, Date date, User user, Account account) {
+        Income income = new Income(description,sum,date,user,account);
         incomeRepo.save(income);
     }
 
@@ -38,4 +39,6 @@ public class IncomeServiceImpl implements IncomeService {
     public List<Income> findIncomeByUser(User user) {
         return incomeRepo.findIncomeByUser(user);
     }
+
+
 }

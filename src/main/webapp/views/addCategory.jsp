@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Admin
@@ -15,6 +16,12 @@
 <form action="/add/category" method="post">
     <div class="add-category-form">
     <input name="categoryName" placeholder="Category Name">
+        <select name="icon">
+            <c:forEach items="${iconList}" var="icon">
+            <option value="${icon.id}">${icon.name}</option>
+            </c:forEach>
+        </select>
+    <%--<input name="icon" placeholder="Icon Name">--%>
     <button type="submit">Confirm</button>
     </div>
 </form>

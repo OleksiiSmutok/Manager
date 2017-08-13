@@ -1,6 +1,7 @@
 package ua.oleksa.home.persistence.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Admin on 31.05.2017.
@@ -12,20 +13,27 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String icon;
+    private double sum;
 
     @ManyToOne
     private User user;
 
-    public Category(String name, String icon, User user) {
+    @ManyToOne
+    private Icon icon;
+
+    @OneToMany(mappedBy = "category")
+    private List<Spending>spendings;
+
+    public Category(String name, double sum, User user) {
         this.name = name;
-        this.icon = icon;
+        this.sum = sum;
         this.user = user;
     }
 
-    public Category(String name, User user) {
+    public Category(String name, User user, Icon icon) {
         this.name = name;
         this.user = user;
+        this.icon = icon;
     }
 
     public Category() {
@@ -47,20 +55,36 @@ public class Category {
         this.name = name;
     }
 
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
     public User getUser() {
         return user;
     }
 
+    public double getSum() {
+        return sum;
+    }
+
+    public void setSum(double sum) {
+        this.sum = sum;
+    }
+
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public List<Spending> getSpendings() {
+        return spendings;
+    }
+
+    public void setSpendings(List<Spending> spendings) {
+        this.spendings = spendings;
+    }
+
+    public Icon getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Icon icon) {
+        this.icon = icon;
     }
 
     @Override
@@ -68,8 +92,9 @@ public class Category {
         return "Category{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", icon='" + icon + '\'' +
+                ", sum=" + sum +
                 ", user=" + user +
+                ", spendings=" + spendings +
                 '}';
     }
 }

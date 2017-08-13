@@ -18,6 +18,9 @@
 <div class="login-form">
 <form action="/loginProcessing" method="post">
 
+    <h1 class="title">Login</h1>
+    <%--<hr>--%>
+
     <div class="input">
         <i class="fa fa-sign-in fa-2x"></i>
         <input class="input-group" type="text" name="username" placeholder="Login">

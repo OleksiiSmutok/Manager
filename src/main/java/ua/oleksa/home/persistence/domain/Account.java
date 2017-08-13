@@ -21,6 +21,9 @@ public class Account {
     @OneToMany(mappedBy = "account")
     private List<Income>incomes;
 
+    @OneToMany(mappedBy = "account")
+    private List<Spending>spendings;
+
     public Account(String name, double balance, User user) {
         this.name = name;
         this.balance = balance;
@@ -68,6 +71,14 @@ public class Account {
 
     public void setIncomes(List<Income> incomes) {
         this.incomes = incomes;
+    }
+
+    public List<Spending> getSpendings() {
+        return spendings;
+    }
+
+    public void setSpendings(List<Spending> spendings) {
+        this.spendings = spendings;
     }
 
     @Override

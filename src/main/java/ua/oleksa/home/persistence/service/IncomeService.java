@@ -5,6 +5,7 @@ import ua.oleksa.home.persistence.domain.Account;
 import ua.oleksa.home.persistence.domain.Income;
 import ua.oleksa.home.persistence.domain.User;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -12,9 +13,10 @@ import java.util.List;
  */
 public interface IncomeService {
 
-    void add(String description,double sum,User user,Account account);
+    void add(String description, double sum, Date date, User user, Account account);
 
     void update(int id,String description,double sum);
 
     List<Income> findIncomeByUser(User user);
+
 }

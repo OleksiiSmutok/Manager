@@ -54,8 +54,8 @@
 
         <li class="menu__list"><a href="#">Spending</a>
             <ul class="menu__drop">
-                <li><a href="#">Подпункт 1</a></li>
-                <li><a href="#">Подпункт 2</a></li>
+                <li><a href="/spending/page">Add Spending</a></li>
+                <li><a href="/view/spending">View Spending</a></li>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>
                 <%--<li><a href="#">Подпункт 5</a></li>--%>
@@ -68,92 +68,175 @@
 <a href="/logout"><button class="logout-button" type="submit ">logout</button> </a>
 </div>
 
-<div class="user">
-    <div class="name">${user.firstName} ${user.secondName}</div>
-</div>
+<div class="photo"><img width="1325" height="300" src="/resources/img/ftr-banner-About-Us.jpg"></div>
 
+<div class="accounts">
+
+    <div class="name">${user.firstName} ${user.secondName}</div>
+
+    <c:choose>
+        <c:when test="${accountList.size()>=1}">
+            <div class="account1">${accountList.get(0).name} ${accountList.get(0).balance}</div>
+        </c:when>
+    </c:choose>
+
+    <c:choose>
+        <c:when test="${accountList.size()>=2}">
+            <div class="account2">${accountList.get(1).name} ${accountList.get(1).balance}</div>
+        </c:when>
+    </c:choose>
+
+    <c:choose>
+        <c:when test="${accountList.size()>=3}">
+            <div class="account3">${accountList.get(2).name} ${accountList.get(2).balance}</div>
+        </c:when>
+    </c:choose>
+</div>
 
 <div class="categories">
 
     <c:choose>
         <c:when test="${categoryList.size()>=1}">
-            <div class="category">
-                <i class="fa fa-film fa-3x" aria-hidden="true"></i>
+            <a class="a" href="/view/one/category/${categoryList.get(0).id}">
+                <div class="category">
+                <i class="${categoryList.get(0).icon.description}" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(0).name}</div>
             </div>
+            </a>
         </c:when>
     </c:choose>
 
 
     <c:choose>
         <c:when test="${categoryList.size()>=2}">
+            <a class="a" href="/view/one/category/${categoryList.get(1).id}">
             <div class="category">
-                <i class="fa fa-graduation-cap fa-3x" aria-hidden="true"></i>
+                <i class="${categoryList.get(1).icon.description}" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(1).name}</div>
             </div>
+            </a>
         </c:when>
     </c:choose>
 
     <c:choose>
         <c:when test="${categoryList.size()>=3}">
+            <a class="a" href="/view/one/category/${categoryList.get(2).id}">
             <div class="category">
-                <i class="fa fa-heartbeat fa-3x" aria-hidden="true"></i>
+                <i class="${categoryList.get(2).icon.description}" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(2).name}</div>
             </div>
+            </a>
         </c:when>
     </c:choose>
 
     <c:choose>
         <c:when test="${categoryList.size()>=4}">
+            <a class="a" href="/view/one/category/${categoryList.get(3).id}">
             <div class="category">
-                <i class="fa fa-home fa-3x" aria-hidden="true"></i>
+                <i class="${categoryList.get(3).icon.description}" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(3).name}</div>
             </div>
+            </a>
         </c:when>
     </c:choose>
 
     <c:choose>
         <c:when test="${categoryList.size()>=5}">
+            <a class="a" href="/view/one/category/${categoryList.get(4).id}">
             <div class="category">
-                <i class="fa fa-cutlery fa-3x" aria-hidden="true"></i>
+                <i class="${categoryList.get(4).icon.description}" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(4).name}</div>
             </div>
+            </a>
         </c:when>
     </c:choose>
 
     <c:choose>
         <c:when test="${categoryList.size()>=6}">
+            <a class="a" href="/view/one/category/${categoryList.get(5).id}">
             <div class="category">
-                <i class="fa fa-gift fa-3x"></i>
+                <i class="${categoryList.get(5).icon.description}"></i>
                 <div class="category-name">${categoryList.get(5).name}</div>
             </div>
+            </a>
         </c:when>
     </c:choose>
 
     <c:choose>
         <c:when test="${categoryList.size()>=7}">
+            <a class="a" href="/view/one/category/${categoryList.get(6).id}">
             <div class="category">
-                <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+                <i class="${categoryList.get(6).icon.description}" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(6).name}</div>
             </div>
+            </a>
         </c:when>
     </c:choose>
 
     <c:choose>
         <c:when test="${categoryList.size()>=8}">
+            <a class="a" href="/view/one/category/${categoryList.get(7).id}">
             <div class="category">
-                <i class="fa fa-internet-explorer fa-3x" aria-hidden="true"></i>
+                <i class="${categoryList.get(7).icon.description}" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(7).name}</div>
             </div>
+            </a>
         </c:when>
     </c:choose>
 
-    <%--<div class="category"></div>--%>
-    <%--<div class="category"></div>--%>
-    <%--<div class="category"></div>--%>
-    <%--<div class="category"></div>--%>
-    <%--<div class="category"></div>--%>
-    <%--<div class="category"></div>--%>
+    <c:choose>
+        <c:when test="${categoryList.size()>=9}">
+            <a class="a" href="/view/one/category/${categoryList.get(8).id}">
+                <div class="category">
+                    <i class="${categoryList.get(8).icon.description}" aria-hidden="true"></i>
+                    <div class="category-name">${categoryList.get(8).name}</div>
+                </div>
+            </a>
+        </c:when>
+    </c:choose>
+
+    <c:choose>
+        <c:when test="${categoryList.size()>=10}">
+            <a class="a" href="/view/one/category/${categoryList.get(9).id}">
+                <div class="category">
+                    <i class="${categoryList.get(9).icon.description}" aria-hidden="true"></i>
+                    <div class="category-name">${categoryList.get(9).name}</div>
+                </div>
+            </a>
+        </c:when>
+    </c:choose>
+
+    <c:choose>
+        <c:when test="${categoryList.size()>=11}">
+            <a class="a" href="/view/one/category/${categoryList.get(10).id}">
+                <div class="category">
+                    <i class="${categoryList.get(10).icon.description}" aria-hidden="true"></i>
+                    <div class="category-name">${categoryList.get(10).name}</div>
+                </div>
+            </a>
+        </c:when>
+    </c:choose>
+
+    <c:choose>
+        <c:when test="${categoryList.size()>=12}">
+            <a class="a" href="/view/one/category/${categoryList.get(11).id}">
+                <div class="category">
+                    <i class="${categoryList.get(11).icon.description}" aria-hidden="true"></i>
+                    <div class="category-name">${categoryList.get(11).name}</div>
+                </div>
+            </a>
+        </c:when>
+    </c:choose>
+
+    <c:choose>
+        <c:when test="${categoryList.size() <= 11}">
+    <a href="/category/page"><div class="plus"><i class="fa fa-plus-square-o fa-4x" aria-hidden="true"></i></div></a>
+        </c:when>
+        <c:otherwise>
+            <a href="/category/page"><div class="plus" style="display: none"><i class="fa fa-plus-square-o fa-4x" aria-hidden="true"></i></div></a>
+        </c:otherwise>
+    </c:choose>
+
 </div>
 
 <script src="/resources/js/jquery-3.2.1.min.js"></script>

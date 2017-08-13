@@ -13,4 +13,5 @@ import java.util.List;
 public interface IncomeRepo extends JpaRepository<Income,Integer> {
 
     List<Income>findIncomeByUser(User user);
+
 }

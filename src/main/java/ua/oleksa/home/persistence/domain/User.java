@@ -29,6 +29,9 @@ public class User {
     private List<Income>incomes;
 
     @OneToMany(mappedBy = "user")
+    private List<Spending>spendings;
+
+    @OneToMany(mappedBy = "user")
     private List<Category>categories;
 
     public User(String firstName, String secondName, String email, String phone, String login, String password) {
@@ -129,6 +132,14 @@ public class User {
 
     public void setIncomes(List<Income> incomes) {
         this.incomes = incomes;
+    }
+
+    public List<Spending> getSpendings() {
+        return spendings;
+    }
+
+    public void setSpendings(List<Spending> spendings) {
+        this.spendings = spendings;
     }
 
     @Override
