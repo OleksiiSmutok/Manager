@@ -3,6 +3,7 @@ package ua.oleksa.home.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -66,6 +67,24 @@ public class SpendingController {
         accountService.update(account);
         spendingService.add(description,sum,date,category,account,user);
         return "redirect:/spending/page";
+    }
+
+    @RequestMapping(value = "/add/spending/to/one/category/{id}",method = RequestMethod.POST)
+    public String addSpendingToOneCategory(@PathVariable Integer id,Principal principal,
+                                           @RequestParam("description")String description,
+                                           @RequestParam("sum")double sum,
+                                           @RequestParam("account")int idAccount){
+        User user = userService.findByLogin(principal.getName());
+        java.util.Calendar calendar = Calendar.getInstance();
+        Date date = new Date(calendar.getTime().getTime());
+        Category category = categoryService.findOne(id);
+        Account account = accountService.findOne(idAccount);
+        category.setSum(sum + category.getSum());
+        account.setBalance(account.getBalance() - sum);
+        categoryService.update(category);
+        accountService.update(account);
+        spendingService.add(description,sum,date,category,account,user);
+        return "redirect:/view/one/category/{id}";
     }
 
     @RequestMapping(value = "/view/spending",method = RequestMethod.GET)

@@ -71,9 +71,9 @@ ul{
     height: 377px;
     margin-top: 40px;
     margin-left: 70px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     opacity: 0.8;
-    border: solid 1px #3d3d3d;
+    /*border: solid 1px #3d3d3d;*/
     /*background-color: #919191;*/
 
 }
@@ -87,6 +87,9 @@ ul{
     border: none;
     transition: 0.5s all;
 }
+.category:hover{
+    color: #919191;
+}
 .category-name{
     width: 297px;
     height: 30px;
@@ -97,24 +100,19 @@ ul{
     margin-top: 10px;
     color: #3d3d3d;
 }
-.category:hover{
-    color: #919191;
-}
-.fa{
+.icon{
     margin-top: 10px;
     margin-left: 120px;
 
 }
-
 
 .accounts{
     width: 1200px;
     height: 27px;
     margin-top: 30px;
     margin-left: 70px;
-    /*background-color: greenyellow;*/
 }
-.account1{
+.account{
     width: 300px;
     height: 27px;
     color: white;
@@ -125,50 +123,50 @@ ul{
     float: left;
     transition: 0.5s all;
 }
-.account1:hover{
+.account:hover{
     background-color: #666666;
 }
-.account2{
-    width: 300px;
-    height: 27px;
-    color: white;
-    font-size: 19px;
-    /*border-radius: 10px;*/
-    text-align: center;
-    background-color: #3d3d3d;
-    float: left;
-    transition: 0.5s all;
-}
-.account2:hover{
-    background-color: #666666;
-}
-.account3{
-    width: 300px;
-    height: 27px;
-    color: white;
-    font-size: 19px;
-    /*border-radius: 10px;*/
-    text-align: center;
-    background-color: #3d3d3d;
-    float: left;
-    transition: 0.5s all;
-}
-.account3:hover{
-    background-color: #666666;
-}
+
 .a{
     color: #3d3d3d;
 }
 .plus{
-    width: 100px;
-    height: 100px;
+    width: 10px;
+    height: 10px;
+    margin-left: 120px;
     color: #3d3d3d;
     transition: 0.5s all;
     float: left;
 }
 .plus:hover{
     color: #919191;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 5px;
 }
+.plus1{
+    width: 10px;
+    height: 10px;
+    margin-top: 20px;
+    margin-left: 120px;
+    color: #3d3d3d;
+    transition: 0.5s all;
+    float: left;
+}
+.plus1:hover{
+    color: #919191;
+    padding: 0px 0px 0px 5px;
+}
+.add-your-account-or-category{
+    width: 300px;
+    height: 27px;
+    color: white;
+    font-size: 19px;
+    margin-left: 70px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #3d3d3d;
+    float: left;
+    transition: 0.5s all;
+}
+
 
 

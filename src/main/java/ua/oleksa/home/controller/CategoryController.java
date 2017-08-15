@@ -7,16 +7,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import ua.oleksa.home.persistence.domain.Category;
-import ua.oleksa.home.persistence.domain.Icon;
-import ua.oleksa.home.persistence.domain.Spending;
-import ua.oleksa.home.persistence.domain.User;
-import ua.oleksa.home.persistence.service.CategoryService;
-import ua.oleksa.home.persistence.service.IconService;
-import ua.oleksa.home.persistence.service.SpendingService;
-import ua.oleksa.home.persistence.service.UserService;
+import ua.oleksa.home.persistence.domain.*;
+import ua.oleksa.home.persistence.service.*;
 
 import java.security.Principal;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -36,6 +31,9 @@ public class CategoryController {
 
     @Autowired
     IconService iconService;
+
+    @Autowired
+    AccountService accountService;
 
     @RequestMapping(value = "/category/page",method = RequestMethod.GET)
     public String categoryPage(Model model, Principal principal){
@@ -68,9 +66,12 @@ public class CategoryController {
         User user = userService.findByLogin(principal.getName());
         Category category = categoryService.findOne(id);
         List<Spending>spendingList = spendingService.findSpendingByCategory(category);
+        List<Account>accountList = accountService.findAccountByUser(user);
+        Collections.reverse(spendingList);
         model.addAttribute("user",user);
         model.addAttribute("category",category);
         model.addAttribute("spendingList",spendingList);
+        model.addAttribute("accountList",accountList);
         return "viewOneCategory";
     }
 }

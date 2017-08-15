@@ -1,0 +1,114 @@
+.input-form{
+    width: 700px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 320px;
+    margin-top: 30px;
+}
+.account-in-category{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: #3d3d3d;
+    float: left;
+    transition: 0.5s all;
+}
+.account-in-category:hover{
+    background-color: #919191;
+}
+.input-group{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: #3d3d3d;
+    float: left;
+    transition: 0.5s all;
+}
+.input-group:hover{
+    background-color: #919191;
+}
+.button-confirm{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    font-size: 22px;
+    border: none;
+    color: white;
+    background-color: #3d3d3d;
+    transition: 0.5s all;
+}
+.button-confirm:hover{
+    background-color: #919191;
+}
+.spending{
+    margin-top: 20px;
+}
+.spendings{
+    width: 920px;
+    height: 50px;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 210px;
+    color: #3d3d3d;
+    transition: 0.5s all;
+}
+.category-sum{
+    width: 225px;
+    height: 30px;
+    text-align: center;
+    margin-top: 90px;
+    margin-left: 540px;
+    font-size: 19px;
+    color: white;
+    background-color: #3d3d3d;
+    transition: 0.5s all;
+}
+.category-sum:hover{
+    background-color: #666666;
+}
+.description{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: #666666;
+    float: left;
+    margin-left: 2px;
+    font-size: 22px;
+    background-color: #6ecded;
+    transition: 0.5s all;
+}
+.update{
+    width: 50px;
+    height: 50px;
+    background-color: #6ecded;
+    transition: 0.5s all;
+}
+.update:hover{
+    color: #919191;
+}
+.delete{
+    width: 50px;
+    height: 50px;
+    background-color: #6ecded;
+    transition: 0.5s all;
+}
+.delete:hover{
+    color: #919191;
+}
+.add-your-spending{
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 503px;
+    margin-top: 20px;
+    background-color: #6ecded;
+    color: #3d3d3d;
+}
