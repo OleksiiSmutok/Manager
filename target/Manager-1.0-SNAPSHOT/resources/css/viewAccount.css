@@ -1,0 +1,150 @@
+a{text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.side{
+    width: 1125px;
+    float: left;
+}
+.menu a{
+    background: #3d3d3d;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #666;
+    transition: 0.5s all;
+}
+.menu a:hover{
+    background: #666;
+    padding: 10px 0 10px 20px;
+}
+.menu__list{
+    text-align: center;
+    width: 225px;
+    position: relative;
+    float: left;
+}
+
+.menu__drop{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    margin-top: 39px;
+    top: -9999em;
+    transition: 0.5s opacity;
+}
+.menu__list:hover .menu__drop{
+    opacity: 1;
+    top: 0;
+}
+.logout-button{
+    width: 200px;
+    height: 39px;
+    border: none;
+    color: white;
+    background-color: #3d3d3d;
+    transition: 0.5s all;
+}
+.logout-button:hover{
+    background-color: #666;
+}
+
+
+.accounts{
+    height: 320px;
+    margin-top: 20px;
+}
+.one-account{
+    width: 920px;
+    height: 50px;
+    /*margin-top: 10px;*/
+    margin-left: 215px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #3d3d3d;
+    transition: 0.5s all;
+    float: left;
+}
+
+.description{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: #666666;
+    float: left;
+    margin-left: 2px;
+    font-size: 22px;
+    background-color: #6ecded;
+    transition: 0.5s all;
+}
+.update{
+    width: 50px;
+    height: 50px;
+    background-color: #6ecded;
+    transition: 0.5s all;
+}
+.update:hover{
+    color: #919191;
+}
+.delete{
+    width: 50px;
+    height: 50px;
+    background-color: #6ecded;
+    transition: 0.5s all;
+}
+.delete:hover{
+    color: #919191;
+}
+.text{
+    transition: 0.5s all;
+}
+.text:hover{
+    padding: 0px 0 0px 20px;
+}
+.text1{
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 520px;
+    margin-top: 100px;
+    background-color: #3d3d3d;
+    color: white;
+    transition: 0.5s all;
+}
+.text1:hover{
+    background-color: #919191;
+}
+.text2{
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 520px;
+    margin-top: 210px;
+    background-color: #3d3d3d;
+    color: white;
+    transition: 0.5s all;
+}
+.text2:hover{
+    background-color: #919191;
+}
+.hr{
+    width: 1200px;
+    height: 3px;
+    background-color: #3d3d3d;
+    margin-left: 70px;
+    margin-top: 77px;
+    margin-bottom: 40px;
+}
+.hr1{
+    width: 1200px;
+    height: 3px;
+    background-color: #3d3d3d;
+    margin-left: 70px;
+    margin-top: 307px;
+    margin-bottom: 40px;
+}

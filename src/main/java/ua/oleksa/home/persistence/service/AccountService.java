@@ -2,8 +2,10 @@ package ua.oleksa.home.persistence.service;
 
 import org.springframework.stereotype.Service;
 import ua.oleksa.home.persistence.domain.Account;
+import ua.oleksa.home.persistence.domain.Currency;
 import ua.oleksa.home.persistence.domain.User;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -12,7 +14,7 @@ import java.util.List;
 
 public interface AccountService {
 
-    void add(String name,double balance,User user);
+    void add(String name, double balance, Date date,User user, Currency currency);
 
     void update(int id,String name, double balance);
 

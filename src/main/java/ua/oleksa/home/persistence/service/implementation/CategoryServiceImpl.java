@@ -8,6 +8,7 @@ import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.repository.CategoryRepo;
 import ua.oleksa.home.persistence.service.CategoryService;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -20,8 +21,8 @@ public class CategoryServiceImpl implements CategoryService {
     CategoryRepo categoryRepo;
 
     @Override
-    public void add(String name,User user,Icon icon) {
-        Category category = new Category(name,user,icon);
+    public void add(String name, Date date,User user, Icon icon) {
+        Category category = new Category(name,date,user,icon);
         categoryRepo.save(category);
     }
 
@@ -38,6 +39,11 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Category findOne(int id) {
         return categoryRepo.findOne(id);
+    }
+
+    @Override
+    public void delete(int id) {
+        categoryRepo.delete(id);
     }
 
 }

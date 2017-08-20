@@ -31,7 +31,7 @@
         <li class="menu__list"><a href="#">Category</a>
             <ul class="menu__drop">
                 <li><a href="/category/page">Add Category</a></li>
-                <li><a href="/view/category">View Category</a></li>
+                <li><a href="/view/category">All Categories</a></li>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>
                 <%--<li><a href="#">Подпункт 5</a></li>--%>
@@ -82,42 +82,56 @@
 
     <c:choose>
         <c:when test="${accountList.size()>=1}">
-            <div class="account">${accountList.get(0).name} ${accountList.get(0).balance}</div>
+            <div class="account">${accountList.get(0).name} ${accountList.get(0).balance} ${accountList.get(0).currency.name}</div>
         </c:when>
     </c:choose>
 
     <c:choose>
         <c:when test="${accountList.size()>=2}">
-            <div class="account">${accountList.get(1).name} ${accountList.get(1).balance}</div>
+            <div class="account">${accountList.get(1).name} ${accountList.get(1).balance} ${accountList.get(1).currency.name}</div>
         </c:when>
     </c:choose>
 
     <c:choose>
         <c:when test="${accountList.size()>=3}">
-            <div class="account">${accountList.get(2).name} ${accountList.get(2).balance}</div>
+            <div class="account">${accountList.get(2).name} ${accountList.get(2).balance} ${accountList.get(2).currency.name}</div>
         </c:when>
     </c:choose>
 
     <c:choose>
         <c:when test="${accountList.size() <= 2}">
-    <a href="/account/page"><div class="plus"><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i></div></a>
+    <a href="/account/page"><div class="plus-1"><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i></div></a>
         </c:when>
         <c:otherwise>
-            <a href="/category/page"><div class="plus" style="display: none"><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i></div></a>
+            <a href="/account/page"><div class="plus-1" style="display: none"><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i></div></a>
         </c:otherwise>
     </c:choose>
 </div>
 
 <c:choose>
     <c:when test="${accountList.size() <= 0}">
-<div class="add-your-account-or-category">Add your Account or Category on +</div>
+<div class="add-your-account-or-category">Add your Account on +</div>
     </c:when>
     <c:otherwise>
         <div class="add-your-account-or-category" style="display: none">Add your Account or Category on +</div>
     </c:otherwise>
 </c:choose>
 
-<div class="categories">
+
+
+
+<c:choose>
+    <c:when test="${categoryList.size() <= 0}">
+<a href="/category/page"><div class="categories">
+
+    <div class="plus-2"><i class="fa fa-plus-square-o icon-plus-2" aria-hidden="true"></i></div>
+    <div class="add-your-category">Add your Category</div>
+
+</div></a>
+    </c:when>
+
+    <c:otherwise>
+<div class="categories" style="background-color: white">
 
     <c:choose>
         <c:when test="${categoryList.size()>=1}">
@@ -254,14 +268,18 @@
 
     <c:choose>
         <c:when test="${categoryList.size() <= 11}">
-    <a href="/category/page"><div class="plus1"><i class="fa fa-plus-square-o fa-4x" aria-hidden="true"></i></div></a>
+    <a href="/category/page"><div class="plus-3"><i class="fa fa-plus-square-o fa-4x" aria-hidden="true"></i></div></a>
         </c:when>
         <c:otherwise>
-            <a href="/category/page"><div class="plus1" style="display: none"><i class="fa fa-plus-square-o fa-4x" aria-hidden="true"></i></div></a>
+            <a href="/category/page"><div class="plus-3" style="display: none"><i class="fa fa-plus-square-o fa-4x" aria-hidden="true"></i></div></a>
         </c:otherwise>
     </c:choose>
-
 </div>
+
+    </c:otherwise>
+</c:choose>
+
+<hr class="hr">
 
 <script src="/resources/js/jquery-3.2.1.min.js"></script>
 

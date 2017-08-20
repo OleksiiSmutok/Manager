@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.oleksa.home.persistence.domain.Account;
+import ua.oleksa.home.persistence.domain.Currency;
 import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.service.AccountService;
+import ua.oleksa.home.persistence.service.CurrencyService;
 import ua.oleksa.home.persistence.service.UserService;
 
 import java.security.Principal;
+import java.sql.Date;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -27,19 +31,28 @@ public class AccountController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    CurrencyService currencyService;
+
     @RequestMapping(value = "/account/page",method = RequestMethod.GET)
     public String accountPage(Model model,Principal principal){
         User user = userService.findByLogin(principal.getName());
+        List<Currency>currencyList = currencyService.findAll();
         model.addAttribute("user",user);
+        model.addAttribute("currencyList",currencyList);
         return "addAccount";
     }
 
     @RequestMapping(value = "/add/account",method = RequestMethod.POST)
     public String addAccount(Principal principal,
                              @RequestParam("accountName")String name,
-                             @RequestParam("balance")double balance){
+                             @RequestParam("balance")double balance,
+                             @RequestParam("currency")int id){
         User user = userService.findByLogin(principal.getName());
-        accountService.add(name,balance,user);
+        java.util.Calendar calendar = Calendar.getInstance();
+        Date date = new Date(calendar.getTime().getTime());
+        Currency currency = currencyService.findOne(id);
+        accountService.add(name,balance,date,user,currency);
         return "addAccount";
     }
 

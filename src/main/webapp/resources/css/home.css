@@ -71,11 +71,14 @@ ul{
     height: 377px;
     margin-top: 40px;
     margin-left: 70px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     opacity: 0.8;
     /*border: solid 1px #3d3d3d;*/
-    /*background-color: #919191;*/
-
+    background-color: #919191;
+    transition: 0.5s all;
+}
+.categories:hover{
+    background-color: #c6c6c6;
 }
 .category{
     width: 298px;
@@ -89,6 +92,13 @@ ul{
 }
 .category:hover{
     color: #919191;
+}
+.hr{
+    width: 1200px;
+    height: 3px;
+    background-color: #3d3d3d;
+    margin-left: 70px;
+    margin-bottom: 40px;
 }
 .category-name{
     width: 297px;
@@ -130,7 +140,7 @@ ul{
 .a{
     color: #3d3d3d;
 }
-.plus{
+.plus-1{
     width: 10px;
     height: 10px;
     margin-left: 120px;
@@ -138,20 +148,20 @@ ul{
     transition: 0.5s all;
     float: left;
 }
-.plus:hover{
+.plus-1:hover{
     color: #919191;
     padding: 0px 0px 0px 5px;
 }
-.plus1{
+.plus-3{
     width: 10px;
     height: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 120px;
     color: #3d3d3d;
     transition: 0.5s all;
     float: left;
 }
-.plus1:hover{
+.plus-3:hover{
     color: #919191;
     padding: 0px 0px 0px 5px;
 }
@@ -166,6 +176,19 @@ ul{
     background-color: #3d3d3d;
     float: left;
     transition: 0.5s all;
+}
+.plus-2{
+    margin-left: 550px;
+    font-size: 8em;
+    color: white;
+}
+.icon-plus-2{
+    margin-top: 100px;
+}
+.add-your-category{
+    text-align: center;
+    font-size: 2em;
+    color: white;
 }
 
 

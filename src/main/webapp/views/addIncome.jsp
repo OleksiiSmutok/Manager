@@ -10,22 +10,82 @@
 <html>
 <head>
     <title>Income</title>
+    <link rel="stylesheet" href="/resources/css/addIncome.css">
 </head>
 <body>
 
-<form action="/add/income" method="post">
-<select name="account">
-    <c:forEach items="${accountList}" var="account">
-    <option value="${account.id}">${account.name}</option>
-    </c:forEach>
-</select>
+<div class="side">
+    <ul class="menu">
 
-    <input type="text" name="sum" placeholder="sum">
-    <input type="text" name="description" placeholder="description">
-    <button type="submit">Confirm</button>
+        <li class="menu__list"><a href="/">Home</a>
+        </li>
+
+        <li class="menu__list"><a href="#">Category</a>
+            <ul class="menu__drop">
+                <li><a href="/category/page">Add Category</a></li>
+                <li><a href="/view/category">All Categories</a></li>
+                <%--<li><a href="#">Подпункт 3</a></li>--%>
+                <%--<li><a href="#">Подпункт 4</a></li>--%>
+                <%--<li><a href="#">Подпункт 5</a></li>--%>
+            </ul>
+        </li>
+
+        <li class="menu__list"><a href="#">Account</a>
+            <ul class="menu__drop">
+                <li><a href="/account/page">Add Account</a></li>
+                <li><a href="/view/account">View Accounts</a></li>
+                <%--<li><a href="#">Подпункт 3</a></li>--%>
+                <%--<li><a href="#">Подпункт 4</a></li>--%>
+                <%--<li><a href="#">Подпункт 5</a></li>--%>
+            </ul>
+        </li>
+
+        <li class="menu__list"><a href="#">Income</a>
+            <ul class="menu__drop">
+                <li><a href="/income/page">Add Income</a></li>
+                <li><a href="/view/income">View Income</a></li>
+                <%--<li><a href="#">Подпункт 3</a></li>--%>
+                <%--<li><a href="#">Подпункт 4</a></li>--%>
+                <%--<li><a href="#">Подпункт 5</a></li>--%>
+            </ul>
+        </li>
+
+        <li class="menu__list"><a href="#">Spending</a>
+            <ul class="menu__drop">
+                <li><a href="/spending/page">Add Spending</a></li>
+                <li><a href="/view/spending">View Spending</a></li>
+                <%--<li><a href="#">Подпункт 3</a></li>--%>
+                <%--<li><a href="#">Подпункт 4</a></li>--%>
+                <%--<li><a href="#">Подпункт 5</a></li>--%>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="log">
+    <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+</div>
+
+<div class="photo"><img width="1325" height="300" src="/resources/img/incom.jpg"></div>
+
+
+<form action="/add/income" method="post">
+    <div class="add-income-form">
+
+    <input class="input-group" type="text" name="sum" placeholder="Sum">
+    <input class="input-group" type="text" name="description" placeholder="Description">
+
+    <select class="input-group" name="account">
+        <c:forEach items="${accountList}" var="account">
+            <option value="${account.id}">${account.name}</option>
+        </c:forEach>
+    </select>
+    <button class="button-confirm" type="submit">Confirm</button>
+
+    </div>
 </form>
 
-<a href="/"><button type="submit">Home</button></a>
+<hr class="hr">
 
 </body>
 </html>

@@ -11,6 +11,8 @@ import ua.oleksa.home.persistence.domain.*;
 import ua.oleksa.home.persistence.service.*;
 
 import java.security.Principal;
+import java.sql.Date;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
@@ -49,8 +51,10 @@ public class CategoryController {
                               @RequestParam("categoryName")String name,
                               @RequestParam("icon")int id){
         User user = userService.findByLogin(principal.getName());
+        java.util.Calendar calendar = Calendar.getInstance();
+        Date date = new Date(calendar.getTime().getTime());
         Icon icon = iconService.findOne(id);
-        categoryService.add(name,user,icon);
+        categoryService.add(name,date,user,icon);
         return "redirect:/category/page";
     }
     @RequestMapping(value = "/view/category",method = RequestMethod.GET)
@@ -73,5 +77,12 @@ public class CategoryController {
         model.addAttribute("spendingList",spendingList);
         model.addAttribute("accountList",accountList);
         return "viewOneCategory";
+    }
+    @RequestMapping(value = "/delete/category/{id}",method = RequestMethod.GET)
+    public String delete(@PathVariable Integer id,Principal principal){
+        User user = userService.findByLogin(principal.getName());
+        Category category = categoryService.findOne(id);
+        categoryService.delete(id);
+        return "redirect:/view/category";
     }
 }

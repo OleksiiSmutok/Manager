@@ -3,10 +3,13 @@ package ua.oleksa.home.persistence.service.implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.oleksa.home.persistence.domain.Account;
+import ua.oleksa.home.persistence.domain.Category;
+import ua.oleksa.home.persistence.domain.Currency;
 import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.repository.AccountRepo;
 import ua.oleksa.home.persistence.service.AccountService;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -19,8 +22,8 @@ public class AccountServiceImpl implements AccountService {
     AccountRepo accountRepo;
 
     @Override
-    public void add(String name, double balance,User user) {
-        Account account = new Account(name,balance,user);
+    public void add(String name, double balance, Date date,User user, Currency currency) {
+        Account account = new Account(name,balance,date,user,currency);
         accountRepo.save(account);
     }
 

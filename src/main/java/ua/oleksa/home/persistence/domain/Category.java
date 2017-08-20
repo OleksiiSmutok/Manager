@@ -1,6 +1,7 @@
 package ua.oleksa.home.persistence.domain;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -14,6 +15,7 @@ public class Category {
     private int id;
     private String name;
     private double sum;
+    private Date date;
 
     @ManyToOne
     private User user;
@@ -21,7 +23,7 @@ public class Category {
     @ManyToOne
     private Icon icon;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category",cascade = CascadeType.REMOVE)
     private List<Spending>spendings;
 
     public Category(String name, double sum, User user) {
@@ -30,8 +32,9 @@ public class Category {
         this.user = user;
     }
 
-    public Category(String name, User user, Icon icon) {
+    public Category(String name, Date date, User user, Icon icon) {
         this.name = name;
+        this.date = date;
         this.user = user;
         this.icon = icon;
     }
@@ -55,16 +58,24 @@ public class Category {
         this.name = name;
     }
 
-    public User getUser() {
-        return user;
-    }
-
     public double getSum() {
         return sum;
     }
 
     public void setSum(double sum) {
         this.sum = sum;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public User getUser() {
+        return user;
     }
 
     public void setUser(User user) {
@@ -93,7 +104,9 @@ public class Category {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", sum=" + sum +
+                ", date=" + date +
                 ", user=" + user +
+                ", icon=" + icon +
                 ", spendings=" + spendings +
                 '}';
     }

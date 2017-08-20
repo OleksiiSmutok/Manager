@@ -11,7 +11,6 @@
 <head>
     <title>Category</title>
     <link rel="stylesheet" href="/resources/css/viewOneCategory.css">
-    <link rel="stylesheet" href="/resources/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -25,7 +24,7 @@
         <li class="menu__list"><a href="#">Category</a>
             <ul class="menu__drop">
                 <li><a href="/category/page">Add Category</a></li>
-                <li><a href="/view/category">View Category</a></li>
+                <li><a href="/view/category">All Categories</a></li>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>
                 <%--<li><a href="#">Подпункт 5</a></li>--%>
@@ -65,7 +64,7 @@
 </div>
 
 <div class="log">
-    <a href="/logout"><button class="logout-button" type="submit ">logout</button> </a>
+    <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
 </div>
 
 <div class="category-sum">${category.name} ${category.sum}</div>
@@ -102,8 +101,6 @@
 
 </c:forEach>
 </div>
-
-<%--<div class="category-sum">${category.name} ${category.sum}</div>--%>
 
 <div class="input-form">
     <form action="/add/spending/to/one/category/${category.id}" method="post">
