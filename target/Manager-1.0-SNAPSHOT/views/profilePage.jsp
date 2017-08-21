@@ -9,26 +9,14 @@
 <html>
 <head>
     <title>Profile</title>
+    <link rel="stylesheet" href="/resources/css/profilePage.css">
+
+    <script type="text/javascript">
+
+    </script>
 </head>
 <body>
 
-<label for=""></label>
-<input type="text">
-
-<label for=""></label>
-<input type="text">
-
-<label for=""></label>
-<input type="text">
-
-<label for=""></label>
-<input type="text">
-
-<label for=""></label>
-<input type="text">
-
-<label for=""></label>
-<input type="text">
 
 </body>
 </html>

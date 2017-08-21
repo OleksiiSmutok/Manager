@@ -1,7 +1,6 @@
 package ua.oleksa.home.persistence.service;
 
 import ua.oleksa.home.persistence.domain.Category;
-import ua.oleksa.home.persistence.domain.Icon;
 import ua.oleksa.home.persistence.domain.User;
 
 import java.sql.Date;
@@ -12,9 +11,11 @@ import java.util.List;
  */
 public interface CategoryService {
 
-    void add(String name, Date date, User user, Icon icon);
+    void add(Category category);
 
     void update(Category category);
+
+    void update(int id,String name,String icon,Date date,User user);
 
     List<Category>findCategoryByUser(User user);
 

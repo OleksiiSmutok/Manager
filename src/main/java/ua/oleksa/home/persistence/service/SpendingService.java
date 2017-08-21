@@ -15,6 +15,10 @@ public interface SpendingService {
 
     void add(String description, double sum, Date date, Category category, Account account, User user);
 
+    void delete(int id);
+
+    Spending findOne(int id);
+
     List<Spending> findSpendingByUser(User user);
 
     List<Spending>findSpendingByCategory(Category category);

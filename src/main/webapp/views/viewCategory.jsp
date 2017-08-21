@@ -61,10 +61,9 @@
             </ul>
         </li>
     </ul>
-</div>
-
-<div class="log">
-    <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    <div class="log">
+        <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    </div>
 </div>
 
 <c:choose>
@@ -78,22 +77,22 @@
     <div class="one-category">
         <div class="name-sum">
 
+            <div class="icon"><i class="fa ${category.icon} fa-3x"></i></div>
+
             <div class="description">${category.name}</div>
 
             <div class="description">${category.sum}</div>
 
             <div class="description">${category.date}</div>
 
-            <i class="fa fa-wrench fa-3x update" aria-hidden="true"></i>
-
             <a class="delete" href="/delete/category/${category.id}"><i class="fa fa-trash-o fa-3x" aria-hidden="true"></i></a>
 
         </div>
     </div>
     </a>
-
 </c:forEach>
 </div>
+    <hr class="hr" style="opacity: 0">
     <hr class="hr">
 </c:when>
 
@@ -103,6 +102,8 @@
     </c:otherwise>
 
 </c:choose>
+
+<script src="/resources/js/jquery-3.2.1.min.js"></script>
 
 </body>
 </html>

@@ -98,4 +98,11 @@ public class SpendingController {
         model.addAttribute("accountList",accountList);
         return "viewSpending";
     }
+    @RequestMapping(value = "/delete/spending/{id}",method = RequestMethod.GET)
+    public String delete(@PathVariable Integer id,Principal principal){
+        User user = userService.findByLogin(principal.getName());
+        Spending spending = spendingService.findOne(id);
+        spendingService.delete(id);
+        return "redirect:/view/spending";
+    }
 }

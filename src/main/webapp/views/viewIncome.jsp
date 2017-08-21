@@ -61,10 +61,9 @@
             </ul>
         </li>
     </ul>
-</div>
-
-<div class="log">
-    <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    <div class="log">
+        <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    </div>
 </div>
 
 <c:choose>
@@ -85,14 +84,13 @@
 
                             <div class="description">${income.date}</div>
 
-                            <i class="fa fa-wrench fa-3x update" aria-hidden="true"></i>
-
-                            <i class="fa fa-trash-o fa-3x delete" aria-hidden="true"></i>
+                            <a href="/delete/income/${income.id}"><i class="fa fa-trash-o fa-3x delete" aria-hidden="true"></i></a>
 
                         </div>
 
             </c:forEach>
         </div>
+        <hr class="hr" style="opacity: 0">
         <hr class="hr">
     </c:when>
 
@@ -103,6 +101,8 @@
 
 </c:choose>
 
+<script src="/resources/js/jquery-3.2.1.min.js"></script>
+<script src="/resources/js/viewIncome.js"></script>
 
 </body>
 </html>

@@ -15,13 +15,11 @@ public class Category {
     private int id;
     private String name;
     private double sum;
+    private String icon;
     private Date date;
 
     @ManyToOne
     private User user;
-
-    @ManyToOne
-    private Icon icon;
 
     @OneToMany(mappedBy = "category",cascade = CascadeType.REMOVE)
     private List<Spending>spendings;
@@ -32,11 +30,11 @@ public class Category {
         this.user = user;
     }
 
-    public Category(String name, Date date, User user, Icon icon) {
+    public Category(String name, String icon, Date date, User user) {
         this.name = name;
+        this.icon = icon;
         this.date = date;
         this.user = user;
-        this.icon = icon;
     }
 
     public Category() {
@@ -66,6 +64,14 @@ public class Category {
         this.sum = sum;
     }
 
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
     public Date getDate() {
         return date;
     }
@@ -90,13 +96,6 @@ public class Category {
         this.spendings = spendings;
     }
 
-    public Icon getIcon() {
-        return icon;
-    }
-
-    public void setIcon(Icon icon) {
-        this.icon = icon;
-    }
 
     @Override
     public String toString() {
@@ -104,9 +103,9 @@ public class Category {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", sum=" + sum +
+                ", icon='" + icon + '\'' +
                 ", date=" + date +
                 ", user=" + user +
-                ", icon=" + icon +
                 ", spendings=" + spendings +
                 '}';
     }

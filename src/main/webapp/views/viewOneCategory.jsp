@@ -61,10 +61,9 @@
             </ul>
         </li>
     </ul>
-</div>
-
-<div class="log">
-    <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    <div class="log">
+        <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    </div>
 </div>
 
 <div class="category-sum">${category.name} ${category.sum}</div>
@@ -92,8 +91,6 @@
         <div class="description">${spending.sum}</div>
 
         <div class="description">${spending.date}</div>
-
-        <i class="fa fa-wrench fa-2x update" aria-hidden="true"></i>
 
         <i class="fa fa-trash-o fa-2x delete" aria-hidden="true"></i>
 

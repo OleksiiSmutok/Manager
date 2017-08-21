@@ -36,6 +36,16 @@ public class IncomeServiceImpl implements IncomeService {
     }
 
     @Override
+    public Income findOne(int id) {
+        return incomeRepo.findOne(id);
+    }
+
+    @Override
+    public void delete(int id) {
+        incomeRepo.delete(id);
+    }
+
+    @Override
     public List<Income> findIncomeByUser(User user) {
         return incomeRepo.findIncomeByUser(user);
     }

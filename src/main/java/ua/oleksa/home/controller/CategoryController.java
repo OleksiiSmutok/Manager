@@ -3,10 +3,7 @@ package ua.oleksa.home.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import ua.oleksa.home.persistence.domain.*;
 import ua.oleksa.home.persistence.service.*;
 
@@ -32,31 +29,26 @@ public class CategoryController {
     SpendingService spendingService;
 
     @Autowired
-    IconService iconService;
-
-    @Autowired
     AccountService accountService;
 
     @RequestMapping(value = "/category/page",method = RequestMethod.GET)
     public String categoryPage(Model model, Principal principal){
         User user = userService.findByLogin(principal.getName());
-        List<Icon>iconList = iconService.findAll();
-        model.addAttribute("iconList",iconList);
         model.addAttribute("user",user);
         return "addCategory";
     }
 
     @RequestMapping(value = "/add/category",method = RequestMethod.POST)
-    public String addCategory(Principal principal,
-                              @RequestParam("categoryName")String name,
-                              @RequestParam("icon")int id){
+    @ResponseBody
+    public String addCategory(@RequestBody String array[],Principal principal){
         User user = userService.findByLogin(principal.getName());
         java.util.Calendar calendar = Calendar.getInstance();
         Date date = new Date(calendar.getTime().getTime());
-        Icon icon = iconService.findOne(id);
-        categoryService.add(name,date,user,icon);
+        Category category = new Category(array[0],array[1],date,user);
+        categoryService.add(category);
         return "redirect:/category/page";
     }
+
     @RequestMapping(value = "/view/category",method = RequestMethod.GET)
     public String viewCategory(Model model,Principal principal){
         User user = userService.findByLogin(principal.getName());

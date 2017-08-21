@@ -53,7 +53,7 @@ public class AccountController {
         Date date = new Date(calendar.getTime().getTime());
         Currency currency = currencyService.findOne(id);
         accountService.add(name,balance,date,user,currency);
-        return "addAccount";
+        return "redirect:/account/page";
     }
 
     @RequestMapping(value = "/view/account",method = RequestMethod.GET)
@@ -63,6 +63,13 @@ public class AccountController {
         model.addAttribute("accountList",accountList);
         model.addAttribute("user",user);
         return "viewAccount";
+    }
+    @RequestMapping(value = "/delete/account/{id}",method = RequestMethod.GET)
+    public String delete(@PathVariable Integer id,Principal principal){
+        User user = userService.findByLogin(principal.getName());
+        Account account = accountService.findOne(id);
+        accountService.delete(id);
+        return "redirect:/view/account";
     }
 
 }

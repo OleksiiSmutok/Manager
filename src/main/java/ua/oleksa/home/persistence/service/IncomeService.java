@@ -17,6 +17,10 @@ public interface IncomeService {
 
     void update(int id,String description,double sum);
 
+    Income findOne(int id);
+
+    void delete(int id);
+
     List<Income> findIncomeByUser(User user);
 
 }

@@ -23,10 +23,10 @@ public class Account {
     @ManyToOne
     private Currency currency;
 
-    @OneToMany(mappedBy = "account")
+    @OneToMany(mappedBy = "account",cascade = CascadeType.REMOVE)
     private List<Income>incomes;
 
-    @OneToMany(mappedBy = "account")
+    @OneToMany(mappedBy = "account",cascade = CascadeType.REMOVE)
     private List<Spending>spendings;
 
     public Account(String name, double balance, Date date, User user, Currency currency) {

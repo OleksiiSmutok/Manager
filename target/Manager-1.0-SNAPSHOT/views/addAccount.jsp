@@ -60,10 +60,9 @@
             </ul>
         </li>
     </ul>
-</div>
-
-<div class="log">
-    <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    <div class="log">
+        <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    </div>
 </div>
 
 <div class="photo"><img width="1325" height="300" src="/resources/img/payments_cardservices.jpg"></div>

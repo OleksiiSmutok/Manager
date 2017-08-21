@@ -6,8 +6,7 @@ ul{
     list-style: none;
 }
 .side{
-    width: 1125px;
-    float: left;
+    width: 1325px;
 }
 .menu a{
     background: #3d3d3d;
@@ -53,21 +52,19 @@ ul{
 }
 
 .incomes{
-    height: 320px;
+    height: 332px;
     margin-top: 20px;
 }
 .one-income{
-    width: 920px;
+    width: 870px;
     height: 50px;
-    /*margin-top: 10px;*/
-    margin-left: 215px;
+    margin-left: 240px;
     margin-bottom: 10px;
     text-align: center;
     color: #3d3d3d;
     transition: 0.5s all;
     float: left;
 }
-
 .description{
     width: 200px;
     height: 50px;
@@ -79,18 +76,10 @@ ul{
     background-color: #6ecded;
     transition: 0.5s all;
 }
-.update{
-    width: 50px;
-    height: 50px;
-    background-color: #6ecded;
-    transition: 0.5s all;
-}
-.update:hover{
-    color: #919191;
-}
 .delete{
     width: 50px;
     height: 50px;
+    color: #3d3d3d;
     background-color: #6ecded;
     transition: 0.5s all;
 }
@@ -136,7 +125,7 @@ ul{
     height: 3px;
     background-color: #3d3d3d;
     margin-left: 70px;
-    margin-top: 77px;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 .hr1{

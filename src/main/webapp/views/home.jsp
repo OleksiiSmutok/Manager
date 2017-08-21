@@ -68,17 +68,17 @@
             </ul>
         </li>
     </ul>
-</div>
 
-<div class="log">
-<a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    <div class="log">
+        <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    </div>
 </div>
 
 <div class="photo"><img width="1325" height="300" src="/resources/img/ftr-banner-About-Us.jpg"></div>
 
 <div class="accounts">
 
-    <div class="name">${user.firstName} ${user.secondName}</div>
+    <a href="/view/account"><div class="name">${user.firstName} ${user.secondName}</div></a>
 
     <c:choose>
         <c:when test="${accountList.size()>=1}">
@@ -137,7 +137,7 @@
         <c:when test="${categoryList.size()>=1}">
             <a class="a" href="/view/one/category/${categoryList.get(0).id}">
                 <div class="category">
-                <i class="${categoryList.get(0).icon.description}" aria-hidden="true"></i>
+                <i class="fa ${categoryList.get(0).icon} fa-3x icon" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(0).name}</div>
             </div>
             </a>
@@ -149,7 +149,7 @@
         <c:when test="${categoryList.size()>=2}">
             <a class="a" href="/view/one/category/${categoryList.get(1).id}">
             <div class="category">
-                <i class="${categoryList.get(1).icon.description}" aria-hidden="true"></i>
+                <i class="fa ${categoryList.get(1).icon} fa-3x icon" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(1).name}</div>
             </div>
             </a>
@@ -160,7 +160,7 @@
         <c:when test="${categoryList.size()>=3}">
             <a class="a" href="/view/one/category/${categoryList.get(2).id}">
             <div class="category">
-                <i class="${categoryList.get(2).icon.description}" aria-hidden="true"></i>
+                <i class="fa ${categoryList.get(2).icon} fa-3x icon" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(2).name}</div>
             </div>
             </a>
@@ -171,7 +171,7 @@
         <c:when test="${categoryList.size()>=4}">
             <a class="a" href="/view/one/category/${categoryList.get(3).id}">
             <div class="category">
-                <i class="${categoryList.get(3).icon.description}" aria-hidden="true"></i>
+                <i class="fa ${categoryList.get(3).icon} fa-3x icon" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(3).name}</div>
             </div>
             </a>
@@ -182,7 +182,7 @@
         <c:when test="${categoryList.size()>=5}">
             <a class="a" href="/view/one/category/${categoryList.get(4).id}">
             <div class="category">
-                <i class="${categoryList.get(4).icon.description}" aria-hidden="true"></i>
+                <i class="fa ${categoryList.get(4).icon} fa-3x icon" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(4).name}</div>
             </div>
             </a>
@@ -193,7 +193,7 @@
         <c:when test="${categoryList.size()>=6}">
             <a class="a" href="/view/one/category/${categoryList.get(5).id}">
             <div class="category">
-                <i class="${categoryList.get(5).icon.description}"></i>
+                <i class="fa ${categoryList.get(5).icon} fa-3x icon"></i>
                 <div class="category-name">${categoryList.get(5).name}</div>
             </div>
             </a>
@@ -204,7 +204,7 @@
         <c:when test="${categoryList.size()>=7}">
             <a class="a" href="/view/one/category/${categoryList.get(6).id}">
             <div class="category">
-                <i class="${categoryList.get(6).icon.description}" aria-hidden="true"></i>
+                <i class="fa ${categoryList.get(6).icon} fa-3x icon" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(6).name}</div>
             </div>
             </a>
@@ -215,7 +215,7 @@
         <c:when test="${categoryList.size()>=8}">
             <a class="a" href="/view/one/category/${categoryList.get(7).id}">
             <div class="category">
-                <i class="${categoryList.get(7).icon.description}" aria-hidden="true"></i>
+                <i class=" fa ${categoryList.get(7).icon} fa-3x icon" aria-hidden="true"></i>
                 <div class="category-name">${categoryList.get(7).name}</div>
             </div>
             </a>
@@ -226,7 +226,7 @@
         <c:when test="${categoryList.size()>=9}">
             <a class="a" href="/view/one/category/${categoryList.get(8).id}">
                 <div class="category">
-                    <i class="${categoryList.get(8).icon.description}" aria-hidden="true"></i>
+                    <i class="fa ${categoryList.get(8).icon} fa-3x icon" aria-hidden="true"></i>
                     <div class="category-name">${categoryList.get(8).name}</div>
                 </div>
             </a>
@@ -237,7 +237,7 @@
         <c:when test="${categoryList.size()>=10}">
             <a class="a" href="/view/one/category/${categoryList.get(9).id}">
                 <div class="category">
-                    <i class="${categoryList.get(9).icon.description}" aria-hidden="true"></i>
+                    <i class="fa ${categoryList.get(9).icon} fa-3x icon" aria-hidden="true"></i>
                     <div class="category-name">${categoryList.get(9).name}</div>
                 </div>
             </a>
@@ -248,7 +248,7 @@
         <c:when test="${categoryList.size()>=11}">
             <a class="a" href="/view/one/category/${categoryList.get(10).id}">
                 <div class="category">
-                    <i class="${categoryList.get(10).icon.description}" aria-hidden="true"></i>
+                    <i class="fa ${categoryList.get(10).icon} fa-3x icon" aria-hidden="true"></i>
                     <div class="category-name">${categoryList.get(10).name}</div>
                 </div>
             </a>
@@ -259,7 +259,7 @@
         <c:when test="${categoryList.size()>=12}">
             <a class="a" href="/view/one/category/${categoryList.get(11).id}">
                 <div class="category">
-                    <i class="${categoryList.get(11).icon.description}" aria-hidden="true"></i>
+                    <i class=" fa ${categoryList.get(11).icon} fa-3x icon" aria-hidden="true"></i>
                     <div class="category-name">${categoryList.get(11).name}</div>
                 </div>
             </a>

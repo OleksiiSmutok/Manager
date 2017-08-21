@@ -61,39 +61,51 @@
             </ul>
         </li>
     </ul>
-</div>
-
-<div class="log">
-    <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    <div class="log">
+        <a href="/logout"><button class="logout-button" type="submit ">Logout</button> </a>
+    </div>
 </div>
 
 <div class="photo"><img width="1325" height="300" src="/resources/img/finance.jpg"></div>
 
-
-<form action="/add/category" method="post">
-
-    <div class="add-category-form">
-        <input class="input-group" name="categoryName" placeholder="Name your category">
-
-        <select class="icon-in-category" name="icon">
-            <option disabled selected>Choose category</option>
-            <c:forEach items="${iconList}" var="icon">
-                <option value="${icon.id}">${icon.name}</option>
-            </c:forEach>
-        </select>
-
-        <button class="button-confirm" type="submit">Confirm</button>
-    </div>
-
-</form>
+<div class="add-category-form">
+    <div class="name"><input class="categoryName" type="text" placeholder="Name fo Category"></div>
 
 <div class="all-category">
-    <c:forEach items="${iconList}" var="icon">
-        <div class="one-category"><i class="${icon.description}"></i>
-            <div class="one-category-name">${icon.name}</div>
-        </div>
-    </c:forEach>
+        
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-film fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-graduation-cap fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-heartbeat fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-home fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-cutlery fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-gift fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-gamepad fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-internet-explorer fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-shopping-bag fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-bus fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-wifi fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-globe fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-fighter-jet fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-university fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-coffee fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-shopping-cart fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-futbol-o fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-glass fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-taxi fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-bicycle fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-line-chart fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-paw fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-percent fa-3x icon"></i></div>
+        <div class="icon-choose "><i onclick="saveIcon(this)" class="fa fa-cogs fa-3x icon"></i></div>
 </div>
+
+    <button type="submit" class="button-confirm">Confirm</button>
+
+<div class="text" style="display:none;">You are added the category</div>
+</div>
+
+<script src="/resources/js/jquery-3.2.1.min.js"></script>
+<script src="/resources/js/addCategory.js"></script>
 
 <hr class="hr">
 

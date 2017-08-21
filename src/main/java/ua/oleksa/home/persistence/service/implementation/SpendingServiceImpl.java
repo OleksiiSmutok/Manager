@@ -28,6 +28,16 @@ public class SpendingServiceImpl implements SpendingService {
     }
 
     @Override
+    public void delete(int id) {
+        spendingRepo.delete(id);
+    }
+
+    @Override
+    public Spending findOne(int id) {
+        return spendingRepo.findOne(id);
+    }
+
+    @Override
     public List<Spending> findSpendingByUser(User user) {
         return spendingRepo.findSpendingByUser(user);
     }

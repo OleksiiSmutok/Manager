@@ -6,8 +6,7 @@ ul{
     list-style: none;
 }
 .side{
-    width: 1125px;
-    float: left;
+    width: 1325px;
 }
 .menu a{
     background: #3d3d3d;
@@ -111,8 +110,8 @@ ul{
     color: #3d3d3d;
 }
 .icon{
-    margin-top: 10px;
-    margin-left: 120px;
+    margin-top: 20px;
+    margin-left: 123px;
 
 }
 

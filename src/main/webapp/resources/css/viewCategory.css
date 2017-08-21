@@ -6,8 +6,7 @@ ul{
     list-style: none;
 }
 .side{
-    width: 1125px;
-    float: left;
+    width: 1325px;
 }
 .menu a{
     background: #3d3d3d;
@@ -53,14 +52,27 @@ ul{
 }
 
 .categories{
-    height: 320px;
+    height: 332px;
     margin-top: 20px;
+    /*border: solid 1px black;*/
+}
+.icon{
+    width: 60px;
+    height: 50px;
+    color: #3d3d3d;
+    margin-right: 1px;
+    background-color: #6ecded;
+    transition: 0.5s all;
+    float: left;
+}
+.d:hover{
+    color: #919191;
 }
 .one-category{
-    width: 720px;
+    width: 730px;
     height: 50px;
     /*margin-top: 10px;*/
-    margin-left: 315px;
+    margin-left: 310px;
     margin-bottom: 10px;
     text-align: center;
     color: #3d3d3d;
@@ -78,6 +90,9 @@ ul{
     font-size: 22px;
     background-color: #6ecded;
     transition: 0.5s all;
+}
+.description:hover{
+    background-color: #a2e0ff;
 }
 .update{
     width: 50px;
@@ -141,7 +156,7 @@ ul{
     height: 3px;
     background-color: #3d3d3d;
     margin-left: 70px;
-    margin-top: 77px;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 .hr1{
