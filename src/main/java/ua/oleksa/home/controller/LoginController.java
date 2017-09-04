@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.service.UserService;
 
-import java.security.Principal;
-import java.util.List;
+import javax.validation.Valid;
+
 
 /**
  * Created by Admin on 31.05.2017.
@@ -27,5 +27,13 @@ public class LoginController {
     public String login(){
         return "loginPage";
     }
+
+//    @RequestMapping(value = "/loginProcessing",method = RequestMethod.POST)
+//    public String login(@Valid @ModelAttribute("user")User user,BindingResult bindingResult){
+//        if (bindingResult.hasErrors()){
+//            return "loginPage";
+//        }
+//        return "home";
+//    }
 
 }

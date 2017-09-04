@@ -6,7 +6,7 @@ ul{
     list-style: none;
 }
 .side{
-    width: 1325px;
+    width: 1333px;
 }
 .menu a{
     background: #3d3d3d;
@@ -40,7 +40,7 @@ ul{
     top: 0;
 }
 .logout-button{
-    width: 200px;
+    width: 208px;
     height: 39px;
     border: none;
     color: white;

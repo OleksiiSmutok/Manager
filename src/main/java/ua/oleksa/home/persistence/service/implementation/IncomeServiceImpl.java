@@ -46,6 +46,11 @@ public class IncomeServiceImpl implements IncomeService {
     }
 
     @Override
+    public List<Income> findAll() {
+        return incomeRepo.findAll();
+    }
+
+    @Override
     public List<Income> findIncomeByUser(User user) {
         return incomeRepo.findIncomeByUser(user);
     }

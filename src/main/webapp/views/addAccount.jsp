@@ -65,21 +65,23 @@
     </div>
 </div>
 
-<div class="photo"><img width="1325" height="300" src="/resources/img/payments_cardservices.jpg"></div>
+<div class="photo"><img width="1333" height="300" src="/resources/img/payments_cardservices.jpg"></div>
 
 <form action="/add/account" method="post">
     <div class="add-account-form">
 
-        <input class="input-group" name="accountName" placeholder="Account Name">
-        <input class="input-group" name="balance" placeholder="Balance">
+        <input id="accountName" class="input-group" name="accountName" placeholder="Account Name">
+        <input id="balance" class="input-group" name="balance" placeholder="Balance">
 
-        <select class="currency-in-account" name="currency">
+        <select id="currency" class="currency-in-account" name="currency">
             <c:forEach items="${currencyList}" var="currencys">
             <option value="${currencys.id}">${currencys.name}</option>
             </c:forEach>
         </select>
 
         <button class="button-confirm" type="submit">Confirm</button>
+
+        <div class="text" style="display: none">You are added the account</div>
 
     </div>
 </form>

@@ -112,9 +112,6 @@ public class Account {
                 ", balance=" + balance +
                 ", date=" + date +
                 ", user=" + user +
-                ", currency=" + currency +
-                ", incomes=" + incomes +
-                ", spendings=" + spendings +
                 '}';
     }
 }

@@ -2,11 +2,9 @@ package ua.oleksa.home.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import ua.oleksa.home.persistence.domain.Account;
 import ua.oleksa.home.persistence.domain.Income;
 import ua.oleksa.home.persistence.domain.User;
@@ -16,9 +14,7 @@ import ua.oleksa.home.persistence.service.UserService;
 
 import java.security.Principal;
 import java.sql.Date;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Admin on 05.08.2017.
@@ -55,7 +51,7 @@ public class IncomeController {
         account.setBalance(sum+account.getBalance());
         accountService.update(account);
         incomeService.add(description,sum,date,user,account);
-        return "redirect:/income/page";
+        return "redirect:/view/income";
     }
     @RequestMapping(value = "/view/income",method = RequestMethod.GET)
     public String viewIncome(Model model,Principal principal){
@@ -74,6 +70,14 @@ public class IncomeController {
         Income income = incomeService.findOne(id);
         incomeService.delete(id);
         return "redirect:/view/income";
+    }
+    @RequestMapping(value = "/find/all/income",method = RequestMethod.GET)
+    @Transactional
+    @ResponseBody
+    public List<String>findAllIncome(){
+       List<String> list= new ArrayList<>();
+ list.add("aaaa");
+        return list;
     }
 
 }

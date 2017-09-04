@@ -3,10 +3,7 @@ package ua.oleksa.home.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import ua.oleksa.home.persistence.domain.Account;
 import ua.oleksa.home.persistence.domain.Currency;
 import ua.oleksa.home.persistence.domain.User;
@@ -53,13 +50,15 @@ public class AccountController {
         Date date = new Date(calendar.getTime().getTime());
         Currency currency = currencyService.findOne(id);
         accountService.add(name,balance,date,user,currency);
-        return "redirect:/account/page";
+        return "redirect:/view/account";
     }
 
     @RequestMapping(value = "/view/account",method = RequestMethod.GET)
     public String viewAccount(Model model, Principal principal){
         User user = userService.findByLogin(principal.getName());
         List<Account>accountList = accountService.findAccountByUser(user);
+        List<Currency>currencyList = currencyService.findAll();
+        model.addAttribute("currencyList",currencyList);
         model.addAttribute("accountList",accountList);
         model.addAttribute("user",user);
         return "viewAccount";

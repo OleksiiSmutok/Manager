@@ -1,5 +1,7 @@
 package ua.oleksa.home.persistence.domain;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -16,9 +18,11 @@ public class Income {
     private double sum;
     private Date date;
 
+    @JsonIgnore
     @ManyToOne
     private User user;
 
+    @JsonIgnore
     @ManyToOne
     private Account account;
 
@@ -28,6 +32,12 @@ public class Income {
         this.date = date;
         this.user = user;
         this.account = account;
+    }
+
+    public Income(String description, double sum, Date date) {
+        this.description = description;
+        this.sum = sum;
+        this.date = date;
     }
 
     public Income() {
@@ -88,8 +98,6 @@ public class Income {
                 ", description='" + description + '\'' +
                 ", sum=" + sum +
                 ", date=" + date +
-                ", user=" + user +
-                ", account=" + account +
                 '}';
     }
 }

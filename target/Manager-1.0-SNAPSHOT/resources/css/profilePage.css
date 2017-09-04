@@ -1,0 +1,176 @@
+body{
+    background-image: url("/resources/img/2.jpg");
+}
+a{text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.side{
+    width: 1333px;
+}
+.menu a{
+    background: #3d3d3d;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #666;
+    transition: 0.5s all;
+}
+.menu a:hover{
+    background: #666;
+    padding: 10px 0 10px 20px;
+}
+.menu__list{
+    text-align: center;
+    width: 225px;
+    position: relative;
+    float: left;
+}
+
+.menu__drop{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    margin-top: 39px;
+    top: -9999em;
+    transition: 0.5s opacity;
+}
+.menu__list:hover .menu__drop{
+    opacity: 1;
+    top: 0;
+}
+.logout-button{
+    width: 208px;
+    height: 39px;
+    border: none;
+    color: white;
+    background-color: #3d3d3d;
+    transition: 0.5s all;
+}
+.logout-button:hover{
+    background-color: #666;
+}
+.edit-form{
+    width: 600px;
+    margin: auto;
+    margin-top: 80px;
+}
+.fa{
+    margin-top: 20px;
+    margin-left: 30px;
+    transition: 0.5s all;
+}
+.fa:hover{
+    color: #919191;
+}
+.button-confirm{
+    width: 500px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    font-family: "DejaVu Sans";
+    background-color: #3d3d3d;
+    border: none;
+    border-radius: 5px;
+    /*margin-bottom: 100px;*/
+    margin-top: 20px;
+    margin-left: 50px;
+    transition: 0.5s all;
+}
+.button-confirm:hover{
+    background-color: #919191;
+}
+.input-group{
+    width: 500px;
+    height: 35px;
+    font-size: 16px;
+    font-family: "DejaVu Sans";
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.text{
+    width: 200px;
+    height: 20px;
+    font-size: 25px;
+    font-family: "DejaVu Sans";
+    margin-left: 50px;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+}
+.error{
+    width: 200px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    font-family: "DejaVu Sans";
+    margin-top: 2px;
+    margin-left: 200px;
+}
+.hr{
+    width: 500px;
+    height: 1px;
+    margin-left: 50px;
+    background-color: white;
+}
+.footer{
+    width: 1349px;
+    height: 180px;
+    margin-top: 250px;
+    background-color: #3d3d3d;
+}
+.part-1{
+    width: 100px;
+    height: 180px;
+    margin-left: 120px;
+    margin-right: 100px;
+    color: white;
+    float: left;
+}
+.part-2{
+    width: 100px;
+    height: 180px;
+    float: left;
+}
+.part-3{
+    width: 440px;
+    height: 180px;
+    margin-left: 450px;
+    color: white;
+    float: left;
+}
+.follow-us{
+    margin-top: 50px;
+    margin-left: 30px;
+    font-family: "DejaVu Sans";
+    font-size: 16px;
+    color: white;
+}
+.footer-icon{
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    transition:  0.5s all;
+    color: white;
+}
+.footer-icon:hover{
+    color: #6bb6e6;
+}
+.part-of{
+    font-size: 17px;
+    margin-top: 40px;
+    color: white;
+}
+
+.part-of-foot{
+    margin-top: 10px;
+    font-family: "DejaVu Sans";
+    color: white;
+}
+
+

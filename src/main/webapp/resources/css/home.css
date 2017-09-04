@@ -6,7 +6,7 @@ ul{
     list-style: none;
 }
 .side{
-    width: 1325px;
+    width: 1349px;
 }
 .menu a{
     background: #3d3d3d;
@@ -17,6 +17,7 @@ ul{
     transition: 0.5s all;
 }
 .menu a:hover{
+    color: white;
     background: #666;
     padding: 10px 0 10px 20px;
 }
@@ -40,8 +41,8 @@ ul{
     top: 0;
 }
 .logout-button{
-    width: 200px;
-    height: 39px;
+    width: 224px;
+    height: 41px;
     border: none;
     color: white;
     background-color: #3d3d3d;
@@ -73,18 +74,18 @@ ul{
     margin-bottom: 30px;
     opacity: 0.8;
     /*border: solid 1px #3d3d3d;*/
-    background-color: #919191;
+    background-color: #6b6b6b;
     transition: 0.5s all;
 }
 .categories:hover{
-    background-color: #c6c6c6;
+    background-color: #919191;
 }
 .category{
     width: 298px;
     height: 123px;
     margin-top: 2px;
     margin-left: 2px;
-    background-color:#6ecded;
+    background-color:#6bb6e6;
     float: left;
     border: none;
     transition: 0.5s all;
@@ -97,7 +98,7 @@ ul{
     height: 3px;
     background-color: #3d3d3d;
     margin-left: 70px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
 }
 .category-name{
     width: 297px;
@@ -112,13 +113,11 @@ ul{
 .icon{
     margin-top: 20px;
     margin-left: 123px;
-
 }
-
 .accounts{
     width: 1200px;
     height: 27px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 70px;
 }
 .account{
@@ -189,6 +188,63 @@ ul{
     font-size: 2em;
     color: white;
 }
+.footer{
+    width: 1349px;
+    height: 180px;
+    background-color: #3d3d3d;
+}
+.part-1{
+    width: 100px;
+    height: 180px;
+    margin-left: 120px;
+    margin-right: 100px;
+    color: white;
+    float: left;
+    /*background-color: yellow;*/
+}
+.part-2{
+    width: 100px;
+    height: 180px;
+    float: left;
+    /*background-color: #67b168;*/
+}
+.part-3{
+    width: 440px;
+    height: 180px;
+    margin-left: 450px;
+    color: white;
+    float: left;
+    /*background-color: #a6e1ec;*/
+}
+.follow-us{
+    margin-top: 50px;
+    margin-left: 30px;
+    font-family: "DejaVu Sans";
+    font-size: 16px;
+    color: white;
+}
+.footer-icon{
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    transition:  0.5s all;
+    color: white;
+}
+.footer-icon:hover{
+    color: #6bb6e6;
+}
+.part-of{
+    font-size: 17px;
+    margin-top: 40px;
+    color: white;
+}
+
+.part-of-foot{
+    margin-top: 10px;
+    font-family: "DejaVu Sans";
+    color: white;
+}
+
 
 
 

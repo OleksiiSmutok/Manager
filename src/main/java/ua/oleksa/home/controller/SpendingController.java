@@ -29,16 +29,16 @@ import java.util.List;
 public class SpendingController {
 
     @Autowired
-    SpendingService spendingService;
+    private SpendingService spendingService;
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @Autowired
-    AccountService accountService;
+    private AccountService accountService;
 
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
 
     @RequestMapping(value = "/spending/page",method = RequestMethod.GET)
     public String spendingPage(Model model, Principal principal){
@@ -66,7 +66,7 @@ public class SpendingController {
         categoryService.update(category);
         accountService.update(account);
         spendingService.add(description,sum,date,category,account,user);
-        return "redirect:/spending/page";
+        return "redirect:/view/spending";
     }
 
     @RequestMapping(value = "/add/spending/to/one/category/{id}",method = RequestMethod.POST)
@@ -92,10 +92,12 @@ public class SpendingController {
         User user = userService.findByLogin(principal.getName());
         List<Spending>spendingList = spendingService.findSpendingByUser(user);
         List<Account>accountList = accountService.findAccountByUser(user);
+        List<Category>categoryList = categoryService.findCategoryByUser(user);
         Collections.reverse(spendingList);
         model.addAttribute("user",user);
         model.addAttribute("spendingList",spendingList);
         model.addAttribute("accountList",accountList);
+        model.addAttribute("categoryList",categoryList);
         return "viewSpending";
     }
     @RequestMapping(value = "/delete/spending/{id}",method = RequestMethod.GET)
@@ -105,4 +107,13 @@ public class SpendingController {
         spendingService.delete(id);
         return "redirect:/view/spending";
     }
+
+//    @RequestMapping(value = "/delete/one/spending/{id}",method = RequestMethod.GET)
+//    public String deleteOne(@PathVariable Integer id,Principal principal){
+//        User user = userService.findByLogin(principal.getName());
+//        Spending spending = spendingService.findOne(id);
+//        spendingService.delete(id);
+//        return "redirect:/view/one/category/" + spending.getId();
+//    }
+
 }

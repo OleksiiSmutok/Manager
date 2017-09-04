@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import ua.oleksa.home.persistence.domain.User;
 import ua.oleksa.home.persistence.service.UserService;
 
+import javax.validation.Valid;
+
 /**
  * Created by Admin on 05.08.2017.
  */
@@ -17,7 +19,7 @@ import ua.oleksa.home.persistence.service.UserService;
 public class RegistrationController {
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @RequestMapping(value = "/registration",method = RequestMethod.GET)
     public String registration(Model model){
@@ -25,7 +27,10 @@ public class RegistrationController {
         return "registration";
     }
     @RequestMapping(value = "/registration/processing",method = RequestMethod.POST)
-    public String registrationProcessing(@ModelAttribute User user, BindingResult bindingResult){
+    public String registrationProcessing(@Valid @ModelAttribute("user") User user, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            return "registration";
+        }
         userService.add(user);
         return "redirect:/loginPage";
     }

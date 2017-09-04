@@ -1,3 +1,6 @@
+body{
+    background-image: url("/resources/img/1.jpg");
+}
 a{text-decoration: none;
 }
 ul{
@@ -6,7 +9,7 @@ ul{
     list-style: none;
 }
 .side{
-    width: 1325px;
+    width: 1333px;
 }
 .menu a{
     background: #3d3d3d;
@@ -40,7 +43,7 @@ ul{
     top: 0;
 }
 .logout-button{
-    width: 200px;
+    width: 208px;
     height: 39px;
     border: none;
     color: white;
@@ -50,120 +53,171 @@ ul{
 .logout-button:hover{
     background-color: #666;
 }
-
-.categories{
-    height: 332px;
-    margin-top: 20px;
-    /*border: solid 1px black;*/
-}
-.icon{
-    width: 60px;
-    height: 50px;
-    color: #3d3d3d;
-    margin-right: 1px;
-    background-color: #6ecded;
+.add-category{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    font-size: 17px;
+    font-family: "DejaVu Sans";
+    margin-left: 570px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
     transition: 0.5s all;
-    float: left;
+    background-color: #3d3d3d;
+    color: white;
 }
-.d:hover{
-    color: #919191;
+.add-category:hover{
+    background-color: #666666;
+}
+.categories{
+    margin-top: 10px;
 }
 .one-category{
     width: 730px;
     height: 50px;
-    /*margin-top: 10px;*/
     margin-left: 310px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
     color: #3d3d3d;
     transition: 0.5s all;
-    float: left;
 }
 
 .description{
     width: 200px;
     height: 50px;
     text-align: center;
-    color: #666666;
+    color: white;
     float: left;
     margin-left: 2px;
+    margin-right: 2px;
     font-size: 22px;
-    background-color: #6ecded;
+    background-color: #6bb6e6;
     transition: 0.5s all;
 }
 .description:hover{
-    background-color: #a2e0ff;
-}
-.update{
-    width: 50px;
-    height: 50px;
-    color: #3d3d3d;
-    transition: 0.5s all;
-}
-.update:hover{
-    color: #919191;
-}
-.delete{
-    width: 50px;
-    height: 50px;
-    color: #3d3d3d;
-    transition: 0.5s all;
-}
-.delete:hover{
-    color: #919191;
-}
-.fa{
-    width: 50px;
-    height: 50px;
     background-color: #6ecded;
 }
-.text{
-    transition: 0.5s all;
+.description-text{
+    font-family: "DejaVu Sans";
+    margin-top: 10px;
 }
-.text:hover{
-    padding: 0px 0 0px 20px;
+.icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 3px;
+    margin-left: 2px;
+    color: white;
+    background-color: #6bb6e6;
+    transition: 0.5s all;
+    float: left;
+}
+.icon:hover{
+    background-color: #6ecded;
 }
 .text1{
     width: 300px;
     height: 30px;
     text-align: center;
+    font-family: "DejaVu Sans";
     font-size: 25px;
     margin-left: 520px;
     margin-top: 100px;
-    background-color: #3d3d3d;
     color: white;
     transition: 0.5s all;
-}
-.text1:hover{
-    background-color: #919191;
 }
 .text2{
     width: 300px;
     height: 30px;
     text-align: center;
+    font-family: "DejaVu Sans";
     font-size: 25px;
     margin-left: 520px;
     margin-top: 210px;
-    background-color: #3d3d3d;
     color: white;
     transition: 0.5s all;
 }
-.text2:hover{
-    background-color: #919191;
-}
+
 .hr{
-    width: 1200px;
-    height: 3px;
-    background-color: #3d3d3d;
-    margin-left: 70px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    width: 730px;
+    height: 1px;
+    margin-top: 15px;
+    background-color: white;
+    margin-left: 310px;
 }
 .hr1{
     width: 1200px;
     height: 3px;
-    background-color: #3d3d3d;
+    background-color: white;
     margin-left: 70px;
     margin-top: 307px;
     margin-bottom: 40px;
+}
+.hr2{
+    width: 200px;
+    height: 1px;
+    margin-left: 570px;
+    background-color: white;
+}
+
+.footer1{
+    width: 1349px;
+    height: 180px;
+    margin-top: 350px;
+    background-color: #3d3d3d;
+}
+.footer2{
+    width: 1349px;
+    height: 180px;
+    margin-top: 400px;
+    background-color: #3d3d3d;
+}
+.part-1{
+    width: 100px;
+    height: 180px;
+    margin-left: 120px;
+    margin-right: 100px;
+    color: white;
+    float: left;
+}
+.part-2{
+    width: 100px;
+    height: 180px;
+    float: left;
+}
+.part-3{
+    width: 440px;
+    height: 180px;
+    margin-left: 450px;
+    color: white;
+    float: left;
+}
+.follow-us{
+    margin-top: 50px;
+    margin-left: 30px;
+    font-family: "DejaVu Sans";
+    font-size: 16px;
+    color: white;
+}
+.footer-icon{
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    transition:  0.5s all;
+    color: white;
+}
+.footer-icon:hover{
+    color: #6bb6e6;
+}
+.part-of{
+    font-size: 17px;
+    margin-top: 40px;
+    color: white;
+}
+
+.part-of-foot{
+    margin-top: 10px;
+    font-family: "DejaVu Sans";
+    color: white;
 }

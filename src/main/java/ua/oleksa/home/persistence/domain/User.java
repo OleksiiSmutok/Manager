@@ -1,6 +1,14 @@
 package ua.oleksa.home.persistence.domain;
 
+import org.apache.avro.reflect.Stringable;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.NumberFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 /**
@@ -13,25 +21,40 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Size(min = 1, message = "Field can not be empty")
     private String firstName;
+
+    @Size(min = 1,message = "Field can not be empty")
     private String secondName;
+
+    @NotNull
+    @Size(min = 1, max = 30,message = "Field not be empty")
+    @Pattern(regexp="^[a-z0-9](\\.?[a-z0-9]){5,}@gmail\\.com$",message = "Wrong format")
     private String email;
+
+    @NotEmpty(message = "Field can not be empty")
+    @Pattern(regexp="(^$|[0-9]{12})",message = "Wrong format")
     private String phone;
+
+    @Size(min = 1,message = "Field can not be empty")
     private String login;
+
+    @Size(min = 1,message = "Field can not be empty")
     private String password;
+
     private String photo;
 
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE)
     private List<Account>accounts;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE)
     private List<Income>incomes;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE)
     private List<Spending>spendings;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE)
     private List<Category>categories;
 
     public User(String firstName, String secondName, String email, String phone, String login, String password) {
@@ -153,8 +176,6 @@ public class User {
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", photo='" + photo + '\'' +
-                ", accounts=" + accounts +
-                ", categories=" + categories +
                 '}';
     }
 }

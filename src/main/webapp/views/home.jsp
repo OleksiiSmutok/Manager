@@ -9,9 +9,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>home</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/resources/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 
@@ -19,49 +20,49 @@
 <div class="side">
     <ul class="menu">
 
-            <li class="menu__list"><a href="#">Your Profile</a>
+            <li class="menu__list"><a href="/profile/page">Your Profile</a>
                 <ul class="menu__drop">
-                    <li><a href="/profile/page">Settings</a></li>
-                    <li><a href="/">Info</a></li>
+                    <%--<li><a href="/profile/page">Settings</a></li>--%>
+                    <%--<li><a href="/">Info</a></li>--%>
                     <%--<li><a href="#">Подпункт 4</a></li>--%>
                     <%--<li><a href="#">Подпункт 5</a></li>--%>
                 </ul>
             </li>
 
-        <li class="menu__list"><a href="#">Category</a>
+        <li class="menu__list"><a href="/view/category">Category</a>
             <ul class="menu__drop">
-                <li><a href="/category/page">Add Category</a></li>
-                <li><a href="/view/category">All Categories</a></li>
+                <%--<li><a href="/category/page">Add Category</a></li>--%>
+                <%--<li><a href="/view/category">All Categories</a></li>--%>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>
                 <%--<li><a href="#">Подпункт 5</a></li>--%>
             </ul>
         </li>
 
-        <li class="menu__list"><a href="#">Account</a>
+        <li class="menu__list"><a href="view/account">Account</a>
             <ul class="menu__drop">
-                <li><a href="/account/page">Add Account</a></li>
-                <li><a href="/view/account">View Accounts</a></li>
+                <%--<li><a href="/account/page">Add Account</a></li>--%>
+                <%--<li><a href="/view/account">View Accounts</a></li>--%>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>
                 <%--<li><a href="#">Подпункт 5</a></li>--%>
             </ul>
         </li>
 
-        <li class="menu__list"><a href="#">Income</a>
+        <li class="menu__list"><a href="/view/income">Income</a>
             <ul class="menu__drop">
-                <li><a href="/income/page">Add Income</a></li>
-                <li><a href="/view/income">View Income</a></li>
+                <%--<li><a href="/income/page">Add Income</a></li>--%>
+                <%--<li><a href="/view/income">View Income</a></li>--%>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>
                 <%--<li><a href="#">Подпункт 5</a></li>--%>
             </ul>
         </li>
 
-        <li class="menu__list"><a href="#">Spending</a>
+        <li class="menu__list"><a href="/view/spending">Spending</a>
             <ul class="menu__drop">
-                <li><a href="/spending/page">Add Spending</a></li>
-                <li><a href="/view/spending">View Spending</a></li>
+                <%--<li><a href="/spending/page">Add Spending</a></li>--%>
+                <%--<li><a href="/view/spending">View Spending</a></li>--%>
                 <%--<li><a href="#">Подпункт 3</a></li>--%>
                 <%--<li><a href="#">Подпункт 4</a></li>--%>
                 <%--<li><a href="#">Подпункт 5</a></li>--%>
@@ -74,7 +75,57 @@
     </div>
 </div>
 
-<div class="photo"><img width="1325" height="300" src="/resources/img/ftr-banner-About-Us.jpg"></div>
+
+
+<%--<div class="container">--%>
+<div id="carousel" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+        <li class="active" data-target="#carousel" data-slide-to="0"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="/resources/img/7.jpg" alt="">
+            <div class="carousel-caption">
+                <h3>First Slide</h3>
+                <p>Title</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="/resources/img/6.jpg" alt="">
+            <div class="carousel-caption">
+                <h3>Second Slide</h3>
+                <p>Title</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="/resources/img/8.jpg" alt="">
+            <div class="carousel-caption">
+                <h3>Thrid Slide</h3>
+                <p>Title</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#carousel" class="left carousel-control" role="button" data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+
+    <a href="#carousel" class="right carousel-control" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
+<%--</div>--%>
+
+
 
 <div class="accounts">
 
@@ -100,10 +151,10 @@
 
     <c:choose>
         <c:when test="${accountList.size() <= 2}">
-    <a href="/account/page"><div class="plus-1"><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i></div></a>
+    <a href="/view/account"><div class="plus-1"><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i></div></a>
         </c:when>
         <c:otherwise>
-            <a href="/account/page"><div class="plus-1" style="display: none"><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i></div></a>
+            <a href="/view/account"><div class="plus-1" style="display: none"><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i></div></a>
         </c:otherwise>
     </c:choose>
 </div>
@@ -281,7 +332,34 @@
 
 <hr class="hr">
 
+<div class="footer">
+    <div class="part-1">
+        <a href="/"><div class="part-of">Home</div></a>
+        <a href="/profile/page"><div class="part-of-foot">Your Profile</div></a>
+        <a href="/view/category"><div class="part-of-foot">Category</div></a>
+        <a href="/view/account"><div class="part-of-foot">Account</div></a>
+
+    </div>
+
+    <div class="part-2">
+        <a href=""><div class="part-of">Info</div></a>
+        <a href="/view/income"><div class="part-of-foot">Income</div></a>
+        <a href="/view/spending"><div class="part-of-foot">Spending</div></a>
+        <a href="/logout"><div class="part-of-foot">Logout</div></a>
+    </div>
+
+    <div class="part-3">
+        <div class="follow-us">Follow Us</div>
+        <a href="https://www.facebook.com/?stype=lo&jlou=AfczdddNIrHQvvfgizaurNe5lcj30Lr7HB0EYLok69N5dN__rBXF6cl7H-VlRk_A1z5h1waRUtaPPh62Rek99gn4W730PyGGg_x_p2VWSoVxMQ&smuh=29707&lh=Ac8Ps4PrlsCqlEb8"><i class="fa fa-facebook fa-2x footer-icon"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fa fa-linkedin fa-2x footer-icon"></i></a>
+        <a href="https://www.instagram.com/?hl=ru"><i class="fa fa-instagram fa-2x footer-icon"></i></a>
+        <a href="https://www.youtube.com/?gl=RU&hl=ru"><i class="fa  fa-youtube fa-2x footer-icon"></i></a>
+    </div>
+</div>
+
 <script src="/resources/js/jquery-3.2.1.min.js"></script>
+<script src="/resources/js/bootstrap.js"></script>
+<%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>--%>
 
 </body>
 </html>

@@ -15,6 +15,8 @@ public interface UserService {
 
     void edit(int id,String firstName, String secondName, String email, String phone, String login, String password);
 
+    void edit(User user);
+
     void delete(int id);
 
     void addPhoto(User user,MultipartFile photo);

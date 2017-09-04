@@ -65,7 +65,7 @@
     </div>
 </div>
 
-<div class="photo"><img width="1325" height="300" src="/resources/img/incom.jpg"></div>
+<div class="photo"><img width="1333" height="300" src="/resources/img/incom.jpg"></div>
 
 
 <form action="/add/spending" method="post">
@@ -82,6 +82,7 @@
     </select>
 
         <select class="input-group" name="account">
+            <option disabled selected>Choose account</option>
         <c:forEach items="${accountList}" var="accounts">
             <option value="${accounts.id}">${accounts.name}</option>
         </c:forEach>

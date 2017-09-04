@@ -15,29 +15,39 @@
 </head>
 <body>
 
-<div class="login-form">
+
 <form action="/loginProcessing" method="post">
 
+<div class="login-form">
+
     <h1 class="title">Login</h1>
-    <%--<hr>--%>
+
+    <hr class="hr">
 
     <div class="input">
         <i class="fa fa-sign-in fa-2x"></i>
-        <input class="input-group" type="text" name="username" placeholder="Login">
+        <input id="login" class="input-group" type="text" name="username" placeholder="Login">
     </div>
+
+    <%--<div id="errorMessages1"></div>--%>
 
     <div class="input">
         <i class="fa fa-lock fa-2x"></i>
-        <input class="input-group" type="text" name="password" placeholder="Password">
+        <input id="password" class="input-group" type="password"  name="password" placeholder="Password">
     </div>
 
-    <button class="button-login" type="submit">login</button>
+    <%--<div id="errorMessages2"></div>--%>
+
+    <div class="buttons">
+        <button class="button-login">Login</button>
+
+        <a class="button-registration" href="/registration"><div class="text">Registration</div></a>
+    </div>
+</div>
 </form>
 
-<a class="button-registration" href="/registration">Registration</a>
-</div>
-
-<script src="/resources/js/jquery-3.2.1.min.js"></script>
+<%--<script src="/resources/js/jquery-3.2.1.min.js"></script>--%>
+<%--<script src="/resources/js/loginPage.js"></script>--%>
 
 </body>
 </html>

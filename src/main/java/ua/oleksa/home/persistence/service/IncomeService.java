@@ -21,6 +21,8 @@ public interface IncomeService {
 
     void delete(int id);
 
+    List<Income>findAll();
+
     List<Income> findIncomeByUser(User user);
 
 }
