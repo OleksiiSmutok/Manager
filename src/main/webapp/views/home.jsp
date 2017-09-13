@@ -24,8 +24,6 @@
                 <ul class="menu__drop">
                     <%--<li><a href="/profile/page">Settings</a></li>--%>
                     <%--<li><a href="/">Info</a></li>--%>
-                    <%--<li><a href="#">Подпункт 4</a></li>--%>
-                    <%--<li><a href="#">Подпункт 5</a></li>--%>
                 </ul>
             </li>
 
@@ -33,9 +31,6 @@
             <ul class="menu__drop">
                 <%--<li><a href="/category/page">Add Category</a></li>--%>
                 <%--<li><a href="/view/category">All Categories</a></li>--%>
-                <%--<li><a href="#">Подпункт 3</a></li>--%>
-                <%--<li><a href="#">Подпункт 4</a></li>--%>
-                <%--<li><a href="#">Подпункт 5</a></li>--%>
             </ul>
         </li>
 
@@ -43,9 +38,6 @@
             <ul class="menu__drop">
                 <%--<li><a href="/account/page">Add Account</a></li>--%>
                 <%--<li><a href="/view/account">View Accounts</a></li>--%>
-                <%--<li><a href="#">Подпункт 3</a></li>--%>
-                <%--<li><a href="#">Подпункт 4</a></li>--%>
-                <%--<li><a href="#">Подпункт 5</a></li>--%>
             </ul>
         </li>
 
@@ -53,9 +45,6 @@
             <ul class="menu__drop">
                 <%--<li><a href="/income/page">Add Income</a></li>--%>
                 <%--<li><a href="/view/income">View Income</a></li>--%>
-                <%--<li><a href="#">Подпункт 3</a></li>--%>
-                <%--<li><a href="#">Подпункт 4</a></li>--%>
-                <%--<li><a href="#">Подпункт 5</a></li>--%>
             </ul>
         </li>
 
@@ -63,9 +52,6 @@
             <ul class="menu__drop">
                 <%--<li><a href="/spending/page">Add Spending</a></li>--%>
                 <%--<li><a href="/view/spending">View Spending</a></li>--%>
-                <%--<li><a href="#">Подпункт 3</a></li>--%>
-                <%--<li><a href="#">Подпункт 4</a></li>--%>
-                <%--<li><a href="#">Подпункт 5</a></li>--%>
             </ul>
         </li>
     </ul>
@@ -338,7 +324,7 @@
         <a href="/profile/page"><div class="part-of-foot">Your Profile</div></a>
         <a href="/view/category"><div class="part-of-foot">Category</div></a>
         <a href="/view/account"><div class="part-of-foot">Account</div></a>
-
+        <a href="/calendar"><div class="part-of-foot">Calendar</div></a>
     </div>
 
     <div class="part-2">

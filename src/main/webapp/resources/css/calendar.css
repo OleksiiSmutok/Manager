@@ -1,0 +1,17 @@
+#calendar{
+    width: 800px;
+    margin: auto;
+}
+#calendar .fc-toolbar{
+    background: #a6e1ec;
+    border-radius: 5px;
+}
+#calendar .fc-today{
+    background: #a6e1ec;
+}
+#calendar .fc-day{
+    transition: 0.5s all;
+}
+#calendar .fc-day:hover{
+    background: #a6e1ec;
+}

@@ -10,6 +10,11 @@
 <html>
 <head>
     <title>View Income</title>
+    <%--<link rel="stylesheet" href="/resources/fullcalendar/fullcalendar.css" />--%>
+    <%--<link rel="stylesheet" href="/resources/css/jquery-ui.css" />--%>
+    <%--<link rel="stylesheet" href="/resources/fullcalendar/fullcalendar.print.css" media="print"/>--%>
+    <%--<link rel="stylesheet" href="/resources/css/calendar.css">--%>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/css/viewIncome.css">
@@ -75,6 +80,9 @@
         <div class="container">
             <canvas id="myChart"></canvas>
         </div>
+
+        <%--<div id="calendar"></div>--%>
+        <%--<button id="button-change"></button>--%>
 
         <div class="text1"><div class="text">All Your Incomes</div> </div>
 
@@ -193,6 +201,10 @@
 </c:choose>
 
 
+
+<%--<script src="/resources/fullcalendar/lib/moment.min.js"></script>--%>
+<%--<script src="/resources/fullcalendar/fullcalendar.js"></script>--%>
+<%--<script src="/resources/js/calendar.js"></script>--%>
 
 <script src="/resources/js/jquery-3.2.1.min.js"></script>
 <script src="/resources/js/viewIncome.js"></script>

@@ -57,3 +57,8 @@ var incomeChart = new Chart(myChart,{
         legend:false
     }
 });
+
+// $("#button-change").on("click",function () {
+   // $("#myChart").fadeOut()
+   //  $("#calendar").fadeIn()
+// });
